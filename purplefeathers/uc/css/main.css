@@ -1,0 +1,543 @@
+
+/*---------------------------------------------------
+Theme Name: Amer - Responsive Comming Soon Template
+Theme URI: http://themecafe.serverkurd.com/amer/
+Author: ThemeCafe
+Author URI: http://themecafe.serverkurd.com
+
+  Content of this CSS file:
+
+	1.Body
+	2.Typography
+	3.Header
+	4.Couner-Section
+	5.Subscribe
+	6.Contcat-form
+	7.footer
+	8.Social-icons
+	9.Tablet
+	10.Fonts
+
+---------------------------------------------------*/
+
+
+
+
+/* ------------------ BODY ------------------ */
+
+body {
+	background-color: rgba(21, 19, 19, 0.98);
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 14px;
+	font-weight : normal;
+	text-align : center;
+	margin:0;
+	/*overflow:hidden;*/
+}
+
+.btn-notify {
+	color : #fff;
+	font-size : 16px;
+	font-weight : bold;
+	background : #f8bd27;
+	border : 0;
+	border-bottom : 3px solid #f8bd27;
+	border-top : 3px solid #f8bd27;
+	padding : 11px 28px;
+	text-shadow : none;
+	box-shadow : none;
+	transition : border 0.2s, padding 0.2s;
+}
+
+@media (max-width:620px) {
+	.btn-notify {
+	width : 100%;
+	}
+}
+
+.btn-notify:active {
+	background : #ffd05a;
+	color : #fff;
+	border-top : 3px solid #ffd05a;
+	border-bottom : 3px solid #ffd05a !important ;
+	box-shadow : none;
+}
+
+.btn-notify:hover {
+	background : #ffd05a;
+	color : #fff;
+	border-bottom : 3px solid #ffd05a;
+}
+
+a {
+	transition : color 0.2s;
+}
+
+
+/* ------------------ TYPOGRAPHY ------------------ */
+
+h1 {
+	color : #ffffff;
+	font-size : 36px;
+	font-weight : bold;
+	text-transform : uppercase;
+	letter-spacing : 0.15em;
+	margin : 145px 0 0 0;
+	line-height : 36px;
+}
+
+@media (max-width:620px) {
+	h1 {
+	line-height : 40px;
+	margin-top : 135px;
+	}
+}
+
+h2 {
+	font-size : 24px;
+	line-height : 25px;
+	letter-spacing : 0.2em;
+	font-weight : bold;
+	text-transform : uppercase;
+	color : #a2a2a2;
+	margin-bottom : 40px;
+}
+
+@media (max-width:620px) {
+
+h2 {
+	padding : 0 20px;
+	line-height : 30px;
+   }
+}
+
+h3 {
+	font-size : 24px;
+	color : #a2a2a2;
+	margin-bottom : 40px;
+	font-family : 'robotothin';
+}
+
+h4 {
+	font-size : 14px;
+	color : #f9f9f9;
+	margin-bottom : 40px;
+	font-family : 'robotothin';
+}
+
+p {
+line-height : 25px;
+}
+
+
+/* ------------------ HEADER ------------------ */
+
+header {
+	background : url(../images/bg.png) center no-repeat;
+	background-size: cover;
+	height : 400px;
+	position : relative;
+}
+
+@media (max-width:620px) {
+header {
+	height : 528px;
+}
+}
+
+header .container {
+	position : relative;
+	height : 100%;
+}
+
+header div {
+	box-sizing : border-box;
+}
+
+
+.parallax-viewport {
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:350px;
+	margin:0px auto;
+	position:absolute;
+	text-align:center;
+}
+.parallax-layer {
+	position:absolute;
+	text-align:left;
+}
+.parallax1 {width: 1300px; height: 310px; display: block; top: 0%; margin-top: -21%; left: 0%; margin-left: -12%; z-index:45;}
+.parallax2 {width: 1220px; height: 340px; display: block; top: 0%; margin-top: 0px; left: 0%; margin-left: -56%;}
+.parallax3 {width: 1450px; height: 410px; display: none; top: 0%; margin-top: 0px; left: 0%; margin-left: 0px;}
+.parallax4 {width: 972px;  height: 410px; display: none; top: 0%; margin-top: 0px; left: 0%; margin-left: 0px;}
+.parallax5 {width: 1072px; height: 410px; display: block; top: 0%; margin-top: 0px; left: 0%; margin-left: 36%;}
+.parallax6 {width: 1472px; height: 410px; display: none; top: 0%; margin-top: 0px; left: 0%; margin-left: 0px;}
+.parallax5 img {position:absolute; left:0%; bottom:0%;}
+.parallax1 img {position:absolute; left:0%; top:0%;}	
+
+@media (min-width:769px) {
+	.parallax1 {display: block; margin-top: 0px;margin-left: 0px;}
+	.parallax2 {display: block; margin-top: 0px;margin-left: 0px;}
+	.parallax3 {display: block; margin-top: 0px;margin-left: 0px;}
+	.parallax4 {display: block; margin-top: 0px;margin-left: 0px;}
+	.parallax5 {display: block; margin-top: 0px;margin-left: 0px;}
+	.parallax6 {display: block; margin-top: 0px;margin-left: 0px;}
+	.parallax5 img {position:absolute; left:25%; bottom:-5%;}
+	.parallax1 img {position:absolute; left:21%; top:-70%;}
+}
+
+
+/* ------------------ COUNTER-SECTION ------------------ */
+
+#counter-section {
+	padding : 0 0 30px 0;
+}
+
+
+#counter {
+    margin-left: 6%;
+    margin-right: 0px;
+    margin-top: 0px;
+    width: 100%;
+}
+
+
+.countdown_show4 .countdown_section {
+        height: 79px;
+        width: 100px;
+	position:relative;
+	text-align:center;
+	float:left;
+	margin-right:30px;
+	color:#ffb700;
+	font-size:17px;
+	padding-top:20px;
+	font-family: 'robotothin';
+}
+
+
+.countdown_amount {
+	font-size:55px;
+	font-family: 'robotothin';
+	color:#ffb700;
+}
+
+
+/* ------------------ SUBSCRIBE ------------------ */
+
+#subscribe {
+	padding : 0 0 30px 0;
+}
+
+#subscribe form {
+	/*margin : 0 0 40px 620px;*/
+}
+
+#subscribe .email {
+	width : 458px;
+	height : 48px;
+	box-sizing : border-box;
+	-moz-box-sizing: border-box;
+	border : #ebebeb solid 2px;
+	background : #ebebeb;
+	font-size : 16px;
+	padding-left : 15px;
+	border-radius : 0;
+	margin : 0 10px 0 0;
+	box-shadow : none;
+}
+
+#subscribe .email.placeholder {
+	color : #808080;
+}
+
+#subscribe .email:-moz-placeholder {
+	color : #808080;
+}
+
+#subscribe .email::-moz-placeholder {
+	color : #808080;
+}
+
+#subscribe .email:-ms-input-placeholder {
+	color : #808080;
+}
+
+#subscribe .email::-webkit-input-placeholder {
+	color : #808080;
+}
+#subscribe .email:focus {
+	border-color : #ebebeb;
+	color : #2e2e2e;
+}
+
+@media (max-width:620px) {
+#subscribe .email {
+	width : 100%;
+	margin-bottom : 20px;
+}
+}
+
+#subscribe p {
+	color : #a2a2a2;
+	font-size : 12px;
+	margin : 0;
+	line-height : 12px;
+}
+
+#subscribe p i {
+	color : #e85c41;
+}
+
+
+
+
+/* ------------------ CONTACT ------------------ */
+
+#contact {
+	background : url('../images/bg-contact.png') center no-repeat #cecece;
+	position : relative;
+	padding : 0 0 200px 0;
+}
+
+#contact h2 {
+	color : #fff;
+	margin : 120px 0 40px 0;
+	font-family : 'robotothin';
+	font-size : 35px;
+}
+
+#contact .btn-notify {
+	background : #f8bd27;
+	border-bottom : 3px solid #f8bd27;
+	border-top : 3px solid #f8bd27;
+}
+
+#contact .btn-notify:active {
+	background : #f8bd27;
+	border-top-color : #ffd05a;
+	border-bottom-color : #ffd05a !important ;
+}
+
+#contact .btn-notify:hover {
+	background : #ffd05a;
+	border-bottom-color : #ffd05a;
+}
+
+#contact form {
+	margin : 60px 0 0 0;
+}
+
+#contact form input {
+	width : 298px;
+	height : 50px;
+}
+
+#contact form textarea {
+	height : 150px;
+	width : 100%;
+	max-width : 100%;
+}
+
+#contact form input, #contact form textarea {
+	border-radius : 0;
+	background : #ebebeb;
+	border : #ebebeb solid 2px;
+	padding : 15px;
+	box-sizing : border-box;
+	-moz-box-sizing: border-box;
+	margin-bottom : 20px;
+	color : #2e2e2e;
+	-webkit-appearance: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow : none;
+}
+
+#contact form input.placeholder, #contact form textarea.placeholder {
+	color : #808080;
+}
+
+
+#contact form input:-moz-placeholder, #contact form textarea:-moz-placeholder {
+	color : #808080;
+}
+
+#contact form input::-moz-placeholder, #contact form textarea::-moz-placeholder {
+	color : #808080;
+}
+
+#contact form input:-ms-input-placeholder, #contact form textarea:-ms-input-placeholder {
+	color : #808080;
+}
+
+#contact form input::-webkit-input-placeholder, #contact form textarea::-webkit-input-placeholder {
+	color : #808080;
+}
+
+#contact form input:focus, #contact form textarea:focus {
+	border-color : #a2a2a2;
+	color : #2e2e2e;
+}
+
+#contact form .text {
+	margin-right : 20px;
+}
+
+@media (max-width:620px) {
+#contact form .text {
+	margin-right : 0;
+}
+}
+
+#contact p {
+	color : #fff;
+	font-family : 'robotothin';
+	font-size : 20px;
+}
+
+
+/* ------------------ FOOTER ------------------ */
+#footer {
+	background : #dbdbdb;
+	padding : 60px 0 0 0;
+}
+
+@media (max-width:620px) {
+#footer a {
+	margin : 0 10px 20px 10px;
+}
+}
+
+#footer a:hover {
+	color : #fefefe;
+	border-color : #fefefe;
+	text-decoration : none;
+}
+
+
+
+/* ------------------ SOCIAL ------------------ */
+
+a {text-decoration:none; }
+
+
+.social { padding:0; margin:0em 0; list-style:none; }
+.widget-area ul.social li:before { display:none; }
+.social li, .widget-area ul.social li { display:inline-block; padding:0; margin-bottom: -2px; margin-right: 2px; }
+.social li a { display:block; float:left; line-height:90%; text-align:center; font-family: 'JustVectorRegular'; font-size:32px; padding: 8px 8px 4px 8px; min-width:27px; max-height:28px; color:#444; background:#f8f8f8; border-radius: 0px; }
+.social a, .widget-area ul.social li a { letter-spacing:0; border: 1px solid #ddd; color:#444; background:#e5e5e5; }
+.social li a:hover { color:#fff !important; border-color: transparent !important; background-color:#000; }
+
+.social li a.facebook:hover { background-color:#ecb427; }
+.social li a.twitter:hover { background-color:#ecb427; }
+.social li a.flickr:hover { background-color:#ecb427; }
+.social li a.rss:hover { background-color:#ecb427; }
+.social li a.youtube:hover { background-color:#ecb427; }
+
+
+/* ------------------ TABLET ------------------ */
+@media (min-width:621px) and (max-width:960px) {
+.container {
+	width : 620px;
+}
+
+.span8.offset2 {
+	margin-left : 0;
+}
+}
+
+@media (max-width:620px) {
+header {
+	height : 310px;
+}
+
+.container {
+	width : 100%;
+}
+
+#counter-section {
+	height : 182px;
+}
+
+#subscribe {
+	padding : 0 0 30px 7px !important;
+}
+.parallax1 {width: 1300px; height: 310px; display: block; margin-top: -31%; margin-left: -7%;transform:scale(1.5);-moz-transform: scale(1.5);-webkit-transform: scale(1.5)}
+.parallax2 {width: 1220px; height: 340px; display: block; margin-top: 0px; margin-left: -72%;}
+.parallax3 {width: 1450px; height: 410px; display: none; margin-top: 0px; margin-left: 0px;}
+.parallax4 {width: 972px;  height: 410px; display: none; margin-top: 0px; margin-left: 0px;}
+.parallax5 {width: 1072px; height: 410px; display: block; margin-top: 0px; margin-left: 16%;}
+.parallax6 {width: 1472px; height: 410px; display: none; margin-top: 0px; margin-left: 0px;}
+
+.span8.offset2 {
+	margin-left : 0;
+	width : 100%;
+}
+
+}
+
+/* ------------------ MOBILE ----------------- */
+@media (max-width : 472px) {
+header {
+	height : 293px;
+}
+
+#counter-section {
+	height : 182px;
+}
+
+#subscribe {
+	padding : 0 0 30px 7px !important;
+}
+.parallax1 {width: 1300px; height: 310px; display: block; margin-top: -54%; margin-left: 10%;}
+.parallax2 {width: 1220px; height: 340px; display: block; margin-top: 0px; margin-left: -97%;}
+.parallax3 {width: 1450px; height: 410px; display: none; margin-top: 0px; margin-left: 0px;}
+.parallax4 {width: 972px;  height: 410px; display: none; margin-top: 0px; margin-left: 0px;}
+.parallax5 {width: 1072px; height: 410px; display: block; margin-top: 0px; margin-left: -9%;}
+.parallax6 {width: 1472px; height: 410px; display: none; margin-top: 0px; margin-left: 0px;}
+}
+@media (max-width : 384px) {
+header {
+	height : 293px;
+}
+
+#counter-section {
+	height : 182px;
+}
+
+#subscribe {
+	padding : 0 0 30px 7px !important;
+}
+.parallax1 {width: 1300px; height: 310px; display: block; margin-top: -69%; margin-left: -35%;}
+.parallax2 {width: 1220px; height: 340px; display: block; margin-top: 0px; margin-left: -123%;}
+.parallax3 {width: 1450px; height: 410px; display: none; margin-top: 0px; margin-left: 0px;}
+.parallax4 {width: 972px;  height: 410px; display: none; margin-top: 0px; margin-left: 0px;}
+.parallax5 {width: 1072px; height: 410px; display: block; margin-top: 0px; margin-left: -28%;}
+.parallax6 {width: 1472px; height: 410px; display: none; margin-top: 0px; margin-left: 0px;}
+}
+
+/* ------------------ FONTS ------------------ */
+
+@font-face {
+    font-family: 'robotothin';    
+    src: url('../font/roboto-thin-webfont.html');
+    src: url('../font/roboto-thin-webfontd41d.html?#iefix') format('embedded-opentype'),
+         url('../font/roboto-thin-webfont.woff') format('woff'),
+         url('../font/roboto-thin-webfont-2.html') format('truetype'),
+         url('../font/roboto-thin-webfont-3.html#robotothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face { font-family: 'JustVectorRegular'; font-weight: normal; font-style: normal;
+    src: url('../font/justvector/justvector-webfont.eot');
+    src: url('../font/justvector/justvector-webfontd41d.eot?#iefix') format('eot'),
+         url('../font/justvector/justvector-webfont.ttf') format('truetype'),
+         url('../font/justvector/justvector-webfont.woff') format('woff'),
+         url('../font/justvector/justvector-webfont.svg#webfontmuk63VQd') format('svg');
+}
+
