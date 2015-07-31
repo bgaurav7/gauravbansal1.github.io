@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+  <html lang="en" class='no-js' prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+  
+<!-- Mirrored from vivacity.lnmiit.ac.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jul 2015 01:48:34 GMT -->
+<head>
+    
+  <link href="css/comb.css" rel="stylesheet">
+  
+
+    
+  <!--[if lt IE 9]>
+	<script src="js/html5shiv.js">	</script>
+	<script src="js/respond.min.js"> </script>
+	<![endif]-->
+  <title>
+    Purple Feathers
+  </title>
+  
+  <link rel="stylesheet" type="text/css" media="screen,print" href="css/particles.css" />
+  <script>document.documentElement.className = 'js';</script>
+  </head>
+  <!--/head-->
+  
+<body class="viva">
+<header id="header" role="banner">
+
+    <a href="index.html" class="viva-logo"></a>
+	<div class="viva-nav" style="left: 0px;">
+		<div class="handle"><img id="viva-hat" data-alt-src="images/hatr.png" data-init-src="images/hat.png" src="images/hat.png" alt="viva hat" width=42 height=40><div class="handle-text">MENU</div></div>
+		<label class="myLabel">
+    		<input type='file' id="uploadBannerImage" accept='image/*' onchange="readURL(this);"/>
+    		<span><i class="fa fa-file-image-o"></i><span class="handle-text">NEW IMAGE</span></span>
+		</label> 
+		<div class="viva-tree">
+			<img src="images/viva-tree.png" alt="logo tree" width=60 height=63>
+		</div>
+		    		<ul class="nav nav-pills nav-stacked">
+    		<li role="presentation" class="active"><a href="index.html">Vivacity</a></li>
+  			<li role="presentation"><a href="register/register.html">Registrations</a></li>
+  			<li role="presentation" class=""><a href="events.html">Events</a></li>
+  			<li role="presentation" class=""><a href="schedule.html">Schedule</a></li>
+  			<li role="presentation" class=""><a href="gallery.html">Gallery</a></li>
+  			<li role="presentation" class=""><a href="sponsor.html">Sponsors</a></li>
+  			<li role="presentation" class=""><a href="contact.html">Contact</a></li>		
+		</ul>
+	</div>
+  </header>
+    <section id="home" class="vivacity">
+    	<img id="viva-theme" src="images/particles.png" alt="vivacity theme logo">
+    	
+		<div id=particle-wrapper>
+    		<div id="particle-slider">
+        		<div class="slides">
+        			<div id="first-slide" class="slide" data-src="images/particles.png">
+      				</div>
+    			</div>
+  				<canvas class="draw"></canvas>
+    		</div>
+		</div>
+		    <video autoplay="autoplay" muted="muted" loop="loop" style="z-index:-2;height: 100%; width: 100%; object-fit: fill; overflow: hidden; position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+ 				<source src="videotop.mp4" type="video/mp4" />
+ 				
+				<img src="images/poster.jpg" alt="vivacity background">
+		    </video>
+		    
+</section>
+  
+  
+    
+  
+  
+  <script type="text/javascript" src="js/comb.js">  </script>
+  <script type="text/javascript">
+	  function readURL(input)  {
+	    if (input.files && input.files[0]) {
+	        var reader = new FileReader();
+	        reader.onload = function (e) {
+			$('#particle-wrapper').empty();
+			$('#particle-wrapper').append('<div id="particle-slider"><div class="slides"><div id="first-slide" class="slide" data-src="' + e.target.result + '"></div></div><canvas class="draw"></canvas></div>');
+			xoxo();
+	        }
+	        reader.readAsDataURL(input.files[0]);
+	    }
+	}
+  </script>
+  </body>
+
+</html>
