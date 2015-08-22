@@ -72,7 +72,7 @@
                     <li class="active"><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#events">Events</a></li>
-                    <li><a href="#sponsors">Clients</a></li>
+                    <li><a href="#clients">Clients</a></li>
                     <li><a href="#team">Team</a></li>
                     <!--li><a href="#price">Price</a></li-->
                     <li><a href="#location">Location</a></li>
@@ -2162,61 +2162,17 @@
         </section>
 
         <div class="modal fade" id="first" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-              </div>
-              <div class="modal-body">
-                <div class="media">
-                    <!-- -->
-                    <div class="post-media pull-left">
-                        <img src="assets/img/preview/avatar-v2-1.jpg" alt="" class="media-object" />
-                    </div>
-                    <!-- -->
-                    <div class="media-body">
-                        <div class="post-header">
-                            <div class="post-meta">
-                                <span class="post-date"><i class="fa fa-clock-o"></i> 08:00 - 08:45</span>
-                                <a href="#" class="pull-right">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-stack-2x fa-circle-thin"></i>
-                                        <i class="fa fa-stack-1x fa-share-alt"></i>
-                                    </span>
-                                </a>
-                            </div>
-                            <h2 class="post-title"><a href="#">Speaker Content Header Is Header</a></h2>
-                        </div>
-                        <div class="post-body">
-                            <div class="post-excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam metus. Donec cursus magna eget sem convallis facilisis. Vestibulum dictum nibh at ullamcorper tincidunt. Phasellus scelerisque nisl non ullamcorper pellentesque. Nunc sagittis, felis in feugiat mollis, libero eros consectetur elit non cursus lacus nisl at dolor.</p>
-                                <a href="gallery.html"><p>check out our gallery</p></a>
-                            </div>
-                        </div>
-                        <div class="post-footer">
-                            <span class="post-readmore">
-                                <i class="fa fa-microphone"></i> <strong>John Doe</strong> / CEO at Crown.io
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- -->
-                </div>...
-              </div>
-              <div class="modal-footer">
+          <div id='veil'></div>
+            <div id='preloader-image'></div>
+            <div id='grid'></div>
+              <div id="dismissal" style="position:fixed;top:0;right:1%;z-index:3;font-size:xx-large">
                 <span data-dismiss="modal" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
               </div>
-            </div>
-          </div>
         </div>
         <!-- /PAGE EVENTS -->
 
         <!-- PAGE CLIENTS -->
-        <section class="page-section" id="sponsors">
+        <section class="page-section" id="clients">
             <div class="container">
                 <h1 class="section-title">
                     <span data-animation="flipInY" data-animation-delay="100" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-thumbs-up fa-stack-1x"></i></span></span>
@@ -3058,9 +3014,19 @@
             }
         }
     });
-
 </script>
-
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/media.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+    $('.post-title').click(function() {
+        $('.header').css('display', 'none');
+    });
+    $('#dismissal').click(function() {
+        $('.header').css('display', 'block');
+    });
+});
+</script>
 </body>
 
 <!-- Mirrored from eazzy.me/html/imevent/index-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Aug 2015 12:20:06 GMT -->
