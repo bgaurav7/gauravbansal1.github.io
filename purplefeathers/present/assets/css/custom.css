@@ -1,0 +1,22 @@
+.modal {
+	background-color: purple;
+	color: black;
+	font-family: inherit;
+}
+
+body{
+  scrollbar-base-color: #B503BA;  
+  scrollbar-track-color: #000;
+ }
+
+::-webkit-scrollbar { width: 6px; height: 3px;}
+
+::-webkit-scrollbar-button {background-color: #B503BA; }
+
+::-webkit-scrollbar-track {background-color: #B503BA;}
+
+::-webkit-scrollbar-track-piece {background-color: #000;}
+
+::-webkit-scrollbar-thumb {height: 50px; background-color: #B503BA; border-radius: 3px;}
+
+::-webkit-scrollbar-corner { background-color: #B503BA;}
