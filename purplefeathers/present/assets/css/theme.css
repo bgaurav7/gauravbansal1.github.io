@@ -270,7 +270,7 @@ body.boxed {
 .page-section.background-img-slider {position: relative;}
 .wide .page-section.background-img-slider,
 .boxed .page-section.background-img-slider > .container {
-    background: transparent url("../img/preview/background-img-slider.jpg") 50% 0 repeat !important;
+    /*background: transparent url("../img/preview/background-img-slider.jpg") 50% 0 repeat !important;*/
     background-position: 50% 0 !important;
     background-size: cover !important;
 }

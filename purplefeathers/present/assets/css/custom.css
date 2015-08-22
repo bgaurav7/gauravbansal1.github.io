@@ -9,9 +9,20 @@ body{
   scrollbar-track-color: #000;
  }
 
-::-webkit-scrollbar { width: 6px; height: 3px;}
+ video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+	background-size: cover;
+	transition: 1s opacity;
+}
 
-::-webkit-scrollbar-button {background-color: #B503BA; }
+::-webkit-scrollbar { width: 6px; height: 3px;}
 
 ::-webkit-scrollbar-track {background-color: #B503BA;}
 
