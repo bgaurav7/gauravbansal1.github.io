@@ -1,0 +1,23 @@
+.QOverlay {
+	background-color: #000000;
+	z-index: 9999;
+}
+
+.QLoader {
+	background-color: #CCCCCC;
+	height: 1px;
+}
+
+.QAmt {
+	color:#fff;
+	font-family: 'FuturaStd-Bold';
+	opacity: 0.99;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-size:40px;
+	font-weight:bold;
+	line-height:50px;
+	height:50px;
+	width:100px;
+	margin:-60px 0 0 -50px;
+}

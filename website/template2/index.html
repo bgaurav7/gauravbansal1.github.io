@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<!-- Mirrored from www.saltaboombox.com.ar/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 06 Sep 2015 11:13:26 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>CERVEZA SALTA - BOOMBOX</title>
+	<meta name="robots" content="index, follow">
+    <meta name='rating' content='General'>
+
+	<meta name="Resource-type" content="Document" />
+	<meta name="author" content="Woonky Buenos Aires" />
+	<meta name="description" content="Salta Boombox es el festival de música que resume el espíritu salteño: una mezcla de folklore, fiesta y rock. Este 23 de noviembre tocan Los Huayra, Bersuit y Divididos, entre otros." />
+	<meta name="keywords" content="salta, boombox, cerveza, música, festival, rock, folklore, fiesta, argentina, norte, huayra, bersuit, bergarabat, divididos, perro ciego, mi karma gonzalez, gaby morales, bandas, entradas, vip, acceso, casting, sorteo, juegos, novedades, line up" />
+
+	<meta property="og:title" content="CERVEZA SALTA - BOOMBOX">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="index.html">
+    <meta property="og:image" content="images/fb.jpg">
+    <meta property="og:site_name" content="BOOMBOX">
+    <meta property="og:description" content="Salta Boombox es el festival de música que resume el espíritu salteño: una mezcla de folklore, fiesta y rock. Este 23 de noviembre tocan Los Huayra, Bersuit y Divididos, entre otros.">
+    <meta property="fb:admins" content="1556034955">
+
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+	<link href="css/alertify/alertify.core.css" rel="stylesheet" type="text/css">
+	<link href="css/alertify/alertify.bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="css/fontface.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/queryLoader.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<!-- SCRIPTS -->
+	<script src="js/console.fix.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.html"><\/script>')</script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script>window.TweenMax || document.write('<script src="js/TweenMax-1.10.3.min.html"><\/script>')</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script src="js/jquery.mousewheel.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery.jscrollpane.js"></script>
+
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/spin.min.js"></script>
+	<script src="js/alertify.min.js"></script>
+	<script src="js/utils.min.js"></script>
+	<script src="js/parallaxSite.js"></script>
+
+	<script type='text/javascript' src='js/queryLoader.js'></script>
+	<script src="js/main.min.js"></script>
+	<!-- END SCRIPTS -->
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+
+		$(function(){
+			$('.scroll-pane').jScrollPane({
+				autoReinitialise: true
+			});
+			$("#centrosDeCanje").hide();
+		});
+
+
+		$(document).ready(function() {
+
+			var windowsHeight = $(window).height();
+
+			if(windowsHeight > 700){
+				TweenMax.to([$(".header #logo, #btnHomeLogo")], 0, {css:{margin: "70px auto 40px auto"}, transformOrigin:"center center",ease:Power1.easeOut});
+			}else if(windowsHeight <= 700){
+				TweenMax.to([$(".header #logo, #btnHomeLogo")], 0, {css:{margin: "0px auto 40px auto"}, transformOrigin:"center center",ease:Power1.easeOut});
+			}
+
+
+
+			$("body").queryLoader2({
+				 backgroundColor:'#0f1341',
+				 percentage:true,
+				 completeAnimation: "fade"
+			});
+
+			var pepe = $.fn.fullpage({
+				mouseScrolling: true,
+				/*anchors: ['home', 'boombox', 'lineup', 'entradas', 'accesovip', 'casting', 'novedades'],*/
+				anchors: ['home', 'boombox', 'lineup', 'entradas', 'casting', 'novedades'],
+				menu: '#menu',
+				verticalCentered: true,
+				resize: true,
+				scrollingSpeed: 2000,
+				easing: 'swing',//easeOutExpo
+				navigation: false,
+				controlArrowColor: '#fff',
+				afterLoad: function(anchorLink, index){
+					/*//using index
+					if(index == 'boombox'){
+						console.log("Section boombox ended loading");
+					}
+
+					//using anchorLink
+					if(anchorLink == 'lineup'){
+						console.log("Section lineup ended loading");
+					}*/
+				}
+			});
+
+		});
+
+	</script>
+
+	<script type="text/javascript">
+
+	 var _gaq = _gaq || [];
+	 _gaq.push(['_setAccount', 'UA-2076871-64']);
+	 _gaq.push(['_trackPageview']);
+
+	 (function() {
+	   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	 })();
+
+	</script>
+
+</head>
+<body id="home" class="custom">
+	<div class="header" id="header">
+		<!--<img id="logo" src="images/logo.png" width="530">-->
+		<div id="logo"><a data-menuanchor="home" href="#home"><div id="btnHomeLogo"></div></a></div>
+		<ul id="menu">
+			<li id="btnHome" data-menuanchor="home"  class="active"><a href="#home"><img class="home" id="Home" src="images/menu/btnHome-over.png" width="130" height="20" border="0"></a></li>
+			<li id="btnBoombox" data-menuanchor="boombox"><a href="#boombox"><img class="boombox" id="Boombox" src="images/menu/btnBoombox.png" width="130" height="20" onmouseover="this.src='images/menu/btnBoombox-over.png'" onmouseout="this.src='images/menu/btnBoombox.png'" border="0"></a></li>
+			<li id="btnLineup" data-menuanchor="lineup"><a href="#lineup"><img class="lineup" id="Line Up" src="images/menu/btnLineup.png" width="130" height="20" onmouseover="this.src='images/menu/btnLineup-over.png'" onmouseout="this.src='images/menu/btnLineup.png'" border="0"></a></li>
+			<li id="btnEntradas" data-menuanchor="entradas"><a href="#entradas"><img class="entradas" id="Entradas" src="images/menu/btnEntradas.png" width="130" height="20" onmouseover="this.src='images/menu/btnEntradas-over.png'" onmouseout="this.src='images/menu/btnEntradas.png'" border="0"></a></li>
+			<!-- <li id="btnAcceso" data-menuanchor="accesovip"><a href="#accesovip"><img class="accesovip" id="Acceso Vip" src="images/menu/btnAccesovip.png" width="130" height="20" onmouseover="this.src='images/menu/btnAccesovip-over.png'" onmouseout="this.src='images/menu/btnAccesovip.png'" border="0"></a></li> -->
+			<li id="btnCasting" data-menuanchor="casting"><a href="#casting"><img class="casting" id="Casting" src="images/menu/btnCasting.png" width="130" height="20" onmouseover="this.src='images/menu/btnCasting-over.png'" onmouseout="this.src='images/menu/btnCasting.png'" border="0"></a></li>
+			<li id="btnNovedades" data-menuanchor="novedades"><a href="#novedades"><img class="novedades" id="Novedades" src="images/menu/btnNovedades.png" width="130" height="20" onmouseover="this.src='images/menu/btnNovedades-over.png'" onmouseout="this.src='images/menu/btnNovedades.png'" border="0"></a></li>
+		</ul>
+	</div>
+
+	<!-- HOME -->
+	<div class="section active sec-home" id="section0">
+		<div class="content" id="home">
+
+			<img id="instruccionesHome" src="images/textHome.png" width="442" height="15" border="0">
+
+			<a class="btn arrowDown" data-menuanchor="boombox" href="#boombox" ><img id="arrowDown" src="images/arrowDown.png" width="50" height="50" onmouseover="this.src='images/arrowDown-over.png'" onmouseout="this.src='images/arrowDown.png'" border="0"></a>
+
+			<a class="btn arrowUp" data-menuanchor="boombox" href="#boombox" ><img id="arrowUp" src="images/arrowUp.png" width="50" height="50" onmouseover="this.src='images/arrowUp-over.png'" onmouseout="this.src='images/arrowUp.png'" border="0"></a>
+
+		</div>
+	</div>
+
+	<!-- QUE ES -->
+	<div class="section" id="section1">
+		<div class="intro" id="sec-boombox">
+			<!--<h1>QUE ES</h1>
+			<p>sarsa.</p>-->
+			<img class="plx" id="titulo" data-speed="1.5" data-t="0" data-b="80" src="images/quees/titulo.png" width="487" height="125" border="0">
+			<!--img id="texto" data-speed="1.5" data-t="20" data-b="70" src="images/quees/texto.png" width="479" height="77" border="0"-->
+			<p class="plx" data-speed="1.5" data-t="0" data-b="80" id="texto">
+				Vuelve el festival que resume el espíritu salteño: una fusión de estilos musicales, fiesta y <b>cerveza Salta. El 25 de abril</b> vamos a sacudir Salta con <b>Izquierdos de la cueva, Los Pericos,</b> todo el groove de <b>Cuarteto de Nos</b> y la energía de <b>Las Pelotas</b>. Vuelve Salta Boombox, ¿te lo vas a perder?
+			</p>
+
+			<img class="plx" id="botellas" data-speed="1.5" data-t="10" data-b="90" src="images/quees/botellas.png" width="624" height="669"border="0">
+
+			<img class="plx" id="tapitaUno" data-speed="1.5" data-t="-20" data-b="90" src="images/quees/tapita-1.png" width="155" height="140" border="0">
+			<img class="plx" id="tapitaDos" data-speed="1.5" data-t="30" data-b="70" src="images/quees/tapita-2.png" width="208" height="212" border="0">
+			<img class="plx" id="tapitaTres" data-speed="1.5" data-t="20" data-b="110" src="images/quees/tapita-3.png" width="131" height="125" border="0">
+			<img class="plx" id="tapitaCuatro" data-speed="1.5" data-t="90" data-b="20" src="images/quees/tapita-4.png" width="110" height="109" border="0">
+			<img class="plx" id="tapitaCinco" data-speed="1.5" data-t="65" data-b="120" src="images/quees/tapita-5.png" width="141" height="145" border="0">
+		</div>
+	</div>
+
+	<!-- LINE UP -->
+	<div class="section" id="section2">
+		<div class="intro" id="sec-lineup">
+			<img class="plx" data-speed="1.5" id="tapitaUno" data-t="0" data-b="70" src="images/lineup/tapita-1.png" width="128" height="126" border="0">
+			<img class="plx" data-speed="1.5" id="tapitaDos" data-t="30" data-b="90" src="images/lineup/tapita-2.png" width="148" height="149" border="0">
+				<img class="plx" data-speed="1.5" id="tabla" data-t="30" data-b="80" src="images/lineup/tabla.png" width="952" height="280" border="0">
+			<img class="plx" data-speed="1.5" id="tapitaTres" data-t="20" data-b="80" src="images/lineup/tapita-3.png" width="119" height="139" border="0">
+
+		</div>
+	</div>
+
+	<!-- ENTRADAS -->
+	<div class="section" id="section3">
+
+		<div class="intro" id="sec-entradas">
+			<img class="plx" data-speed="1.5" id="botellas" data-t="0" data-b="110" src="images/entradas/botellas.png" width="798" height="666" border="0">
+			<img class="plx" data-speed="1.5" id="titulo" data-t="20" data-b="90" src="images/entradas/titulo.png" width="275" height="41" border="0">
+			<p class="plx" data-speed="1.5" id="texto" data-t="20" data-b="90">
+			Para conseguir tus entradas simplemente tenés que canjear 2 tapitas rojas + $20. Tomás unas Saltas bien heladas, te acercás a un centro de canje y ya tenés tu entrada<br><br>
+			<b>Además, hay miles de litros de Cerveza SALTA gratis debajo de las tapitas. </b>
+
+			<a href="javascript:void(0);" onClick="showCentros();" title="Ver Centros">VER CENTROS DE CANJE</a>
+			<a id="bases" href="bases_entradas.html" target="_blank" >Ver <span>Bases y Condiciones</span> de la promoción.</a>
+			</p>
+
+			<!--img data-speed="1.5" id="texto" data-t="20" data-b="80" src="images/entradas/texto.png" width="483" height="92" border="0"
+
+			<a class="btn centros" href="javascript:void(0);" onclick="" title="Ver Centros"><img data-speed="1.5" data-t="20" data-b="80" id="centros" src="images/entradas/btnCentros.png" alt="Ver Centros" width="209" height="13" onmouseover="this.src='images/entradas/btnCentros-over.png'" onmouseout="this.src='images/entradas/btnCentros.png'" border="0"></a>-->
+
+			<img class="plx" data-speed="1.5" data-t="20" data-b="100" id="tapitaUno" src="images/entradas/tapita-1.png" width="152" height="145" border="0">
+			<img class="plx" data-speed="1.5" data-t="-20" data-b="100" id="tapitaDos" src="images/entradas/tapita-2.png" width="207" height="185" border="0">
+			<img class="plx" data-speed="1.5" data-t="0" data-b="80" id="tapitaTres" src="images/entradas/tapita-3.png" width="344" height="362" border="0">
+			<img class="plx" data-speed="1.5" data-t="10" data-b="90" id="tapitaCuatro" src="images/entradas/tapita-4.png" width="124" height="134" border="0">
+			<img class="plx" data-speed="1.5" data-t="10" data-b="90" id="tapitaCinco" src="images/entradas/tapita-5.png" width="108" height="111" border="0">
+
+			<!-- POP UP CENTROS DE CANJE -->
+	<div id="centrosDeCanje">
+		<div id="title">
+			<div class="btnCloseConsumo"><a href="javascript:void(0);" onclick="hideCentros();"><img <img src="images/btnClose.png" width="52" height="52" onmouseover="this.src='images/btnClose-over.png'" onmouseout="this.src='images/btnClose.png'" border="0"></a></div>
+		</div>
+		<div class="scroll-pane">
+			<h1>CENTROS DE CANJE EN SALTA CAPITAL</h1>
+			<p>
+			<table >
+				<tr class="ilHead">
+					<td class="headTable lugar">LUGAR</td>
+					<td class="headTable dir">DIRECCIÓN</td>
+					<td class="headTable horario">HORARIOS</td>
+				</tr>
+				<tr>
+					<th class="divider" colspan="3"></th>
+				</tr>
+				<tr>
+					<td class="lugar">Alto Noa Shopping Autoentrada</td>
+					<td class="dir">Avda. Virrey Toledo 702</td>
+					<td class="horario">de 10:00hs a 22:00hs</td>
+				</tr>
+				<tr>
+					<td class="lugar">Distribuidora Badie</td>
+					<td class="dir">Avda. Tavella 2500</td>
+					<td class="horario">de 10:00hs a 16:00hs</td>
+				</tr>
+				<tr>
+					<td class="lugar">Atipiko</td>
+					<td class="dir">San Martin 4400</td>
+					<td class="horario">de 9hs a 13hs y de 18hs a 21hs</td>
+				</tr>
+				<tr>
+					<td class="lugar">Planta Cerveza Salta - Boutique</td>
+					<td class="dir">Adolfo Guemes 1253</td>
+					<td class="horario">de 9hs a 17hs</td>
+				</tr>
+			</table>
+			</p>
+		<h1>CENTROS DE CANJE EN SALTA INTERIOR</h1>
+			<p>
+			<table >
+				<tr class="ilHead">
+					<td class="headTable lugar">LUGAR</td>
+					<td class="headTable dir">DIRECCIÓN</td>
+					<td class="headTable horario">HORARIOS</td>
+				</tr>
+				<tr>
+					<th class="divider" colspan="3"></th>
+				</tr>
+				<tr>
+					<td class="lugar">Pichanal - Distribuidor</td>
+					<td class="dir">20  de Febrero 585</td>
+					<td class="horario">de 9hs a 12hs y de 17hs a 20hs</td>
+				</tr>
+				<tr>
+					<td class="lugar">Colonia Santa Rosa - Distruidor J. Yanakis</td>
+					<td class="dir">Independencia 461</td>
+					<td class="horario">de 9hs a 12hs y de 17hs a 20hs</td>
+				</tr>
+				<tr>
+					<td class="lugar">Embarcación - Distruidor J. Yanakis</td>
+					<td class="dir">24 de Septiembre s/n </td>
+					<td class="horario">de 9hs a 12hs y de 17hs a 20hs</td>
+				</tr>
+				<tr>
+					<td class="lugar">Oran - Deposito COCA COLA</td>
+					<td class="dir">Av.Fassio esq. Natalio Roldan</td>
+					<td class="horario">de 15:30 a 18:30hs</td>
+				</tr>
+				<tr>
+					<td class="lugar">Tartagal - Deposito COCA COLA</td>
+					<td class="dir">Ruta 34 Km 1431</td>
+					<td class="horario">de 15:30 a 18:30hs</td>
+				</tr>
+			</table>
+
+			</p>
+		<h1>CENTRO DE CANJE JUJUY</h1>
+			<p>
+			<table >
+				<tr class="ilHead">
+					<td class="headTable lugar">LUGAR</td>
+					<td class="headTable dir">DIRECCIÓN</td>
+					<td class="headTable horario">HORARIOS</td>
+				</tr>
+				<tr>
+					<th class="divider" colspan="3"></th>
+				</tr>
+				<tr>
+					<td class="lugar">Argentos</td>
+					<td class="dir">Otero 280</td>
+					<td class="horario"></td>
+				</tr>
+			</table>
+			</p>
+		<h1>CENTROS DE CANJE EN SALTA VALLES</h1>
+			<p>
+			<table >
+				<tr class="ilHead">
+					<td class="headTable lugar">LUGAR</td>
+					<td class="headTable dir">DIRECCIÓN</td>
+					<td class="headTable horario">HORARIOS</td>
+				</tr>
+				<tr>
+					<th class="divider" colspan="3"></th>
+				</tr>
+				<tr>
+					<td class="lugar">Guemes, Campo Santo y El Bordo</td>
+					<td class="dir">Tte. Ibáñez Nº 67</td>
+					<td class="horario"></td>
+				</tr>
+				<tr>
+					<td class="lugar">Cerrillos</td>
+					<td class="dir">Abraham Peralta S/N</td>
+					<td class="horario"></td>
+				</tr>
+				<tr>
+					<td class="lugar">Chicoana</td>
+					<td class="dir">25 de Mayo 234</td>
+					<td class="horario"></td>
+				</tr>
+				<tr>
+					<td class="lugar">Campo Quijano</td>
+					<td class="dir">San Martin 470</td>
+					<td class="horario"></td>
+				</tr>
+				<tr>
+					<td class="lugar">Coronel Moldes</td>
+					<td class="dir">Sarmiento 114</td>
+					<td class="horario"></td>
+				</tr>
+				<tr>
+					<td class="lugar">Coronel Moldes</td>
+					<td class="dir">Belgrano s/n</td>
+					<td class="horario"></td>
+				</tr>
+				<tr>
+					<td class="lugar">Cachi</td>
+					<td class="dir">Arana esq. Ruis de los Llanos</td>
+					<td class="horario"></td>
+				</tr>
+				<tr>
+					<td class="lugar">San Antonio de los Cobres</td>
+					<td class="dir">Belgrano 132</td>
+					<td class="horario"></td>
+				</tr>
+				<tr>
+					<td class="lugar">San Antonio de los Cobres</td>
+					<td class="dir">Zavaleta esq. Pellegrini</td>
+					<td class="horario"></td>
+				</tr>
+				<tr>
+					<td class="lugar">El Tala</td>
+					<td class="dir">San Martin s/nº</td>
+					<td class="horario"></td>
+				</tr>
+				<tr>
+					<td class="lugar">Rosario de la Frontera</td>
+					<td class="dir">9 de Julio 76</td>
+					<td class="horario"></td>
+				</tr>
+				<tr>
+					<td class="lugar">La Union- Rivadavia Banda Sur</td>
+					<td class="dir">Miguel Ragone s/nº</td>
+					<td class="horario"></td>
+				</tr>
+				<tr>
+					<td class="lugar">La Union- Rivadavia Banda Sur</td>
+					<td class="dir">Alvarado 334</td>
+					<td class="horario"></td>
+				</tr>
+				<tr>
+					<td class="lugar">Metan - Deposito Coca Cola</td>
+					<td class="dir">25 de Mayo 368</td>
+					<td class="horario">de 8:00hs a 12:00hs</td>
+				</tr>
+				<tr>
+					<td class="lugar">Joaquin V Gonzalez - Deposito Coca Cola</td>
+					<td class="dir">Lavalle 450</td>
+					<td class="horario">de 8:00hs a 12:00hs</td>
+				</tr>
+				<tr>
+					<td class="lugar">Cafayate - Deposito Coca Cola</td>
+					<td class="dir">Ruta 68 Km.2</td>
+					<td class="horario">de 8:00hs a 12:00hs</td>
+				</tr>
+			</table>
+			</p>
+			<p><br></p>
+		</div>
+	</div>
+
+<!-- END CENTROS DE CANJE -->
+
+		</div>
+	</div>
+
+	<!-- ACCESO VIP ->
+	<div class="section" id="section4">
+		<div class="intro" id="sec-accesovip">
+			<img class="plx" data-speed="1.5" data-t="20" data-b="110" id="pase" src="images/acceso/pase.png" width="849" height="1001" border="0">
+			<img class="plx" data-speed="1.5" data-t="10" data-b="100" id="cable" src="images/acceso/cable.png" width="641" height="348" border="0">
+			<!--<img class="plx" data-speed="1.5" data-t="50" data-b="0" id="pua" src="images/acceso/pua.png" width="346" height="357" border="0">
+			->
+			<img class="plx" data-speed="1.5" data-t="10" data-b="70" id="titulo" src="images/acceso/titulo.png" width="479" height="177" border="0">
+
+			<p class="plx" data-speed="1.5" data-t="10" data-b="70" id="texto">
+				Poné todo ese conocimiento a prueba y <b>ganate entradas al VIP del Salta Boombox.</b><br>
+Solo tenés que participar del juego, reconocer la mayor cantidad de bandas y ganás!
+
+				<a href="http://www.iconosdelamusica.com" target="_blank" title="Participar">¡PARTICIPAR POR ENTRADAS VIP!</a><br>
+				<a id="bases" href="http://www.iconosdelamusica.com/bases.html" target="_blank" >Ver <span>Bases y Condiciones</span> de la promoción.</a>
+
+			</p>
+
+			<!--<img data-speed="1.5" data-t="0" data-b="100" id="texto" src="images/acceso/texto.png" width="461" height="45" border="0">
+
+			<a class="btn participar" href="javascript:void(0);" onclick="" title="Participar"><img data-speed="1.5" data-t="0" data-b="100" id="participar" src="images/acceso/btnParticipar.png" alt="Participar" width="294" height="16" onmouseover="this.src='images/acceso/btnParticipar-over.png'" onmouseout="this.src='images/acceso/btnParticipar.png'" border="0"></a>->
+
+		</div>
+	</div>
+	-->
+
+	<!-- CASTING -->
+	<div class="section" id="section5">
+		<div class="intro" id="sec-casting">
+			<img class="plx" data-speed="1.5" data-t="30" data-b="70" id="cable" src="images/casting/cable.png" width="699" height="464" border="0">
+			<img class="plx" data-speed="1.5" data-t="10" data-b="90" id="ampli" src="images/casting/ampli.png" width="801" height="696" border="0">
+
+			<img class="plx" data-speed="1.5" data-t="10" data-b="70" id="titulo" src="images/casting/titulo.png" width="442" height="100" border="0">
+			<p class="plx" data-speed="1.5" data-t="10" data-b="70" id="texto">
+			El sueño de tocar frente a miles de personas y compartir escenario con grandes músicos, está muy cerca. <b>Subí un tema de tu banda, juntá votos y dejá que la gente te elija.</b> Anotate acá.
+
+			<a  href="https://www.facebook.com/cervezasalta/app_176721102515821" target="_blank" title="Casting">¡IR AL CASTING DE BANDAS!</a>
+			<a id="bases" href="https://facebook.woonky.com.ar/salta_boombox/bases.html" target="_blank" >Ver <span>Bases y Condiciones</span> de la promoción.</a>
+			</p>
+
+
+			<!--<img data-speed="1.5" data-t="0" data-b="100" id="texto" src="images/casting/texto.png" width="455" height="59" border="0">
+
+			<a class="btn btncasting" href="https://www.facebook.com/cervezasalta/app_176721102515821" target="_blank" title="Casting"><img data-speed="1.5.5" data-t="0" data-b="100" id="btncasting" src="images/casting/btnCasting.png" alt="Casting" width="251" height="16" onmouseover="this.src='images/casting/btnCasting-over.png'" onmouseout="this.src='images/casting/btnCasting.png'" border="0"></a>-->
+
+
+			<!--<img class="plx" data-speed="1.5" data-t="20" data-b="80" id="puaUno" src="images/casting/pua-1.png" width="300" height="306" border="0">
+			<img class="plx" data-speed="1.5" data-t="10" data-b="70" id="puaDos" src="images/casting/pua-2.png" width="310" height="317" border="0">
+			<img class="plx" data-speed="1.5" data-t="20" data-b="70" id="puaTres" src="images/casting/pua-3.png" width="194" height="226" border="0">-->
+
+		</div>
+	</div>
+
+	<!-- NOVEDADES -->
+	<div class="section" id="section6">
+		<div class="intro" id="sec-novedades">
+
+			<img class="plx" data-speed="1.5" data-t="30" data-b="70" id="tabla" src="images/novedades/tabla.png" width="951" height="335" border="0">
+			<img class="plx" data-speed="1.5" data-t="20" data-b="80" id="botellas" src="images/novedades/botellas.png" width="584" height="627" border="0">
+
+			<a class="btn btnFb" href="https://www.facebook.com/cervezasalta" target="_blank" title="Facebook"><img class="plx" data-speed="1.5" data-t="30" data-b="70" id="btnFb" src="images/novedades/btnFb.png" alt="Facebook" width="282" height="16" onmouseover="this.src='images/novedades/btnFb-over.png'" onmouseout="this.src='images/novedades/btnFb.png'" border="0"></a>
+
+			<a class="btn btnYt" href="http://www.youtube.com/SaltaCerveza" target="_blank" title="Youtube"><img class="plx" data-speed="1.5" data-t="30" data-b="70" id="btnYt" src="images/novedades/btnYt.png" alt="Youtube" width="271" height="16" onmouseover="this.src='images/novedades/btnYt-over.png'" onmouseout="this.src='images/novedades/btnYt.png'" border="0"></a>
+
+
+			<img class="plx" data-speed="1.5" data-t="20" data-b="60" id="tapitaUno" src="images/novedades/tapita-1.png" width="152" height="145" border="0">
+			<img class="plx" data-speed="1.5" data-t="20" data-b="100" id="tapitaDos" src="images/novedades/tapita-2.png" width="158" height="156" border="0">
+			<img class="plx" data-speed="1.5" data-t="40" data-b="80" id="tapitaTres" src="images/novedades/tapita-3.png" width="124" height="134" border="0">
+			<img class="plx" data-speed="1.5" data-t="30" data-b="90" id="tapitaCuatro" src="images/novedades/tapita-4.png" width="108" height="111" border="0">
+
+		</div>
+	</div>
+
+<div id="footer">
+	<p>BEBER CON MODERACIÓN. Prohibida su venta a menores de 18 años. © 2015 Cerveza Salta. Todos los derechos reservados. <a href="bases.html" target="_blank">Bases y Condiciones.</a> <a href="politicas.html" target="_blank">Políticas de Privacidad.</a></p>
+</div>
+
+</body>
+
+<!-- Mirrored from www.saltaboombox.com.ar/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 06 Sep 2015 11:14:16 GMT -->
+</html>

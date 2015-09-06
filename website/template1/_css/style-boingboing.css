@@ -1,0 +1,293 @@
+/*
+font-family: 'Amatic SC', cursive; 400 and 700
+DukeFill / normal
+*/
+
+html {font-family: 'Amatic SC', cursive; font-weight:700; margin:0; padding:0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {margin:0; padding:0; }
+
+a,
+a:before,
+.button,
+.family,
+#howto #roasting,
+.overlay {transition: all 0.5s ease; }
+
+.button {background:#402b1b; color:#fff; cursor:pointer; display:inline-block; font-size:36px; font-weight:bold; margin:0 0 10px; padding:11px 17px; text-decoration:none; } 
+.button:hover {background-color:#c06628; color:#fff; }
+
+.wrapper {display:block; margin:0 auto; max-width:940px; padding:30px 20px 8px; text-align:center; }
+.wrapper h1,
+.wrapper p {font-size:38px; margin:0 0 38px; }
+
+.video {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 0;
+	height: 0;
+	margin-bottom:60px;
+}
+.video object,
+.video embed,
+.video iframe  {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.mfp-title {font-size:28px; line-height:100%; }
+
+#header {background:url('../_img/texture.png') top left repeat, url('../_img/clouds.svg') center 40px no-repeat #5A4A42; display:block; height:auto; overflow:hidden; padding-top:1px; position:relative; width:100%; }
+#header nav {background:url('../_img/bg-nav.svg') center center no-repeat; display:block; height:0; left:0; margin:0; max-width:852px; padding-bottom:15.8450704%; position:absolute; top:30px; width:100%; }
+#header nav ul {bottom:0; list-style:none; margin:0; padding:0; position:absolute; text-align:center; width:100%; }
+#header nav ul li {display:inline-block; margin:0 36px; }
+#header nav ul li a {color:#fff; font-size:34px; text-decoration:none; }
+#header h1 {background:url('../_img/headline-tech-cemetery.svg') center center no-repeat; display:block; height:0; margin:21% auto 14%; max-width:722px; padding:0 0 36.2880886%; position:relative; text-indent:-10000px; width:96%; z-index:3; }
+#header h2 {color:#FFFCEA; display:block; font:48px/100% 'DukeFill',sans-serif; font-weight:normal; margin:0 auto 10px; max-width:400px; text-align:center; text-transform:uppercase; position:relative; width:100%; z-index:5; }
+#header .hills {background:url('../_img/hills.svg') bottom center no-repeat; bottom:0; height:0; left:0; padding-bottom:35.1182197%; position:absolute; width:100%; transform:scale(1.01); z-index:2; }
+#header .cemetery {background:url('../_img/cemetery.svg') bottom center no-repeat; bottom:-10px; height:0; left:0; padding-bottom:35.1955307%; position:absolute; width:100%; z-index:4; }
+
+#memoriam {background:#000; color:#fff; font-size:38px; font-weight:700; }
+#memoriam h1 {position:relative; }
+#memoriam h1:before {background:url('../_img/headline-left.png') center center no-repeat; background-size:66px 33px; content:""; display:block; height:33px; left:34%; position:absolute; top:8px; width:66px; }
+#memoriam h1:after {background:url('../_img/headline-right.png') center center no-repeat; background-size:66px 33px; content:""; display:block; height:33px; right:34%; position:absolute; top:8px; width:66px; }
+
+#templates {background:url('../_img/texture.png') top left repeat #fff; padding:40px 0; }
+#templates h1 {background:url('../_img/headline-departed.png') center center / contain no-repeat; display:block; height:0; margin:0 auto 100px; max-width:663px; padding-bottom:7.54147813%; text-indent:-10000px; width:100%; }
+#templates ul {list-style:none; margin:0; padding:0; text-align:center; }
+#templates ul li {background:url('../_img/pump-mac.png') center top no-repeat; display:inline-block; font-size:36px; font-weight:700; margin:0 6.80851064% 120px; padding:244px 0 0; width:226px; }
+#templates ul li:nth-child(3n){margin-right:0;}
+#templates ul li:first-child,
+#templates ul li:nth-child(3n+1){margin-left:0;}
+
+#templates ul li.mac {background-image:url('../_img/pump-mac.png'); }
+#templates ul li.aol {background-image:url('../_img/pump-aol.png'); }
+#templates ul li.palm {background-image:url('../_img/pump-palm.png'); }
+#templates ul li.atari {background-image:url('../_img/pump-atari.png'); }
+#templates ul li.sony {background-image:url('../_img/pump-sony.png'); }
+#templates ul li.floppy {background-image:url('../_img/pump-floppy.png'); }
+#templates ul li.dos {background-image:url('../_img/pump-dos.png'); }
+#templates ul li.moto {background-image:url('../_img/pump-moto.png'); }
+#templates ul li.vhs {background-image:url('../_img/pump-vhs.png'); }
+#templates ul li.pager {background-image:url('../_img/pump-pager.png'); }
+#templates ul li.polaroid {background-image:url('../_img/pump-polaroid.png'); }
+#templates ul li.netscape {background-image:url('../_img/pump-netscape.png'); }
+
+#howto {background:url('../_img/texture.png') top left repeat, url('../_img/bg-how-top.png') center top / 100% no-repeat, url('../_img/bg-how-bottom.png') center bottom / 100% no-repeat #7b6e67; padding:60px 0; position:relative; }
+#howto h1 {background:url('../_img/headline-how.png') center center / contain no-repeat; display:block; height:60px; margin:0 auto 40px; text-indent:-10000px; width:279px; }
+#howto p {color:#fff; }
+#howto header {background:url('../_img/bg-tools.png') center center / contain no-repeat; display:block; height:0; margin:0 auto; max-width:800px; padding:0 0 32.5%; width:100%; }
+#howto header p {background:url('../_img/tools.png') 9.75% center / 218px 190px no-repeat; color:#111; padding:12.5% 0 12.5% 41.25%; text-align:left; }
+
+#howto ul {list-style:none; margin:0; padding:0; position:relative; text-align:center; }
+#howto ul li { cursor:pointer; display:inline-block; height:300px; margin:0 166px 120px 0; padding:32px 0 0; position:relative; vertical-align:top; width:300px; z-index:1; }
+#howto ul li:nth-child(2n){margin-right:0; }
+#howto ul li .num {background:url('../_img/num-1.png') center center / contain no-repeat; display:block; height:100px; position:absolute; text-align:left; text-indent:-10000px; top:0; right:-14px; width:100px; z-index:5; }
+#howto ul li .card {height:100%; position:relative; width:100%; z-index:4; }
+#howto ul li .card figure {height:60%; position: absolute; width: 100%; }
+#howto ul li .card figure.front {display: block; }
+#howto ul li .card figure.back {display: block; }
+/*
+#howto ul li 					{perspective:0; -webkit-perspective:0; -ms-perspective:0; }
+#howto ul li .card 				{transform-style: preserve-3d; transition: all .2s linear; width: 100%; -webkit-transform-style:preserve-3d; }
+#howto ul li.flipped .card 		{transform: rotateY(180deg); -webkit-transform:rotateY(180deg); -ms-transform:rotateY(180deg); }
+#howto ul li .card figure 		{backface-visibility: hidden; -webkit-backface-visibility:hidden; -ms-backface-visibility:hidden; }
+#howto ul li .card figure.front {transform: rotateY(0deg); -webkit-transform:rotateY(0deg); -ms-transform:rotateY(0deg); }
+#howto ul li.flipped .card figure.front {transform: rotateY(360deg); }
+#howto ul li .card figure.back 	{transform: rotateY(180deg); -webkit-transform:rotateY(180deg); -ms-transform:rotateY(180deg); }
+#howto ul li.flipped .card figure.back {transform: rotateY(-180deg); }
+*/
+
+
+/*For when IE adopts preserve-3d*/
+#howto ul li .card {
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
+-o-transform-style: preserve-3d;
+transform-style: preserve-3d;
+}
+
+/*set Transition and Backface Properties*/
+#howto ul li .card figure {
+-webkit-transition:all .2s linear;
+-moz-transition:all .2s linear;
+transition:all .2s linear;
+position: absolute;
+-moz-backface-visibility:hidden;
+-webkit-backface-visibility:hidden;
+backface-visibility:hidden;
+}
+
+/*Define Side-A*/
+#howto ul li .card figure.front {
+z-index: 10;
+-moz-transform:perspective(800px) rotateY(0deg);
+-webkit-transform:perspective(800px) rotateY(0deg);
+transform:perspective(800px) rotateY(0deg);
+}
+
+/*Define Side-B*/
+#howto ul li .card figure.back {
+-moz-transform:perspective(800px) rotateY(180deg);
+-webkit-transform:perspective(800px) rotateY(180deg);
+transform:perspective(800px) rotateY(180deg);
+}
+
+/*Turns Side-A*/
+#howto ul li.flipped .card figure.front {
+-webkit-transform:perspective(800px) rotateY(180deg);
+-moz-transform:perspective(800px) rotateY(180deg);
+transform:perspective(800px) rotateY(180deg);
+}
+
+/*Simultaneously Turns Side-B in Opposite Direction*/
+#howto ul li.flipped .card figure.back {
+-moz-transform:perspective(800px) rotateY(0);
+-webkit-transform:perspective(800px) rotateY(0);
+transform:perspective(800px) rotateY(0);
+}
+
+#howto ul li figure {background:url('../_img/step-1.png') top left / contain no-repeat; color:#fff; font-size:36px; font-weight:bold; margin:0; padding:324px 0 0; }
+#howto ul li figure.back {background-image:url('../_img/step-1-back.png'); }
+#howto ul li:nth-child(2) .num {background-image:url('../_img/num-2.png'); }
+#howto ul li:nth-child(3) .num {background-image:url('../_img/num-3.png'); }
+#howto ul li:nth-child(4) .num {background-image:url('../_img/num-4.png'); }
+#howto ul li:nth-child(5) .num {background-image:url('../_img/num-5.png'); }
+#howto ul li:nth-child(6) .num {background-image:url('../_img/num-6.png'); }
+#howto ul li:nth-child(2) figure {background-image:url('../_img/step-2.png'); }
+#howto ul li:nth-child(3) figure {background-image:url('../_img/step-3.png'); }
+#howto ul li:nth-child(4) figure {background-image:url('../_img/step-4.png'); }
+#howto ul li:nth-child(5) figure {background-image:url('../_img/step-5.png'); }
+#howto ul li:nth-child(6) figure {background-image:url('../_img/step-6.png'); }
+#howto ul li:nth-child(2) figure.back {background-image:url('../_img/step-2-back.png'); }
+#howto ul li:nth-child(3) figure.back {background-image:url('../_img/step-3-back.png'); }
+#howto ul li:nth-child(4) figure.back {background-image:url('../_img/step-4-back.png'); }
+#howto ul li:nth-child(5) figure.back {background-image:url('../_img/step-5-back.png'); }
+#howto ul li:nth-child(6) figure.back {background-image:url('../_img/step-6-back.png'); }
+
+#howto a.hand {background:url('../_img/trigger-recipe.png') left center / cover no-repeat; cursor:pointer; display:block; height:142px; position:absolute; right:0; top:880px; text-align:left; text-indent:-10000px; width:260px; z-index:99; }
+#howto a.hand:hover {width:310px; }
+#howto #roasting {background:url('../_img/bg-recipe.png') center top / contain no-repeat; color:#fff; font-weight:bold; left:0; margin:0 auto; max-width:609px; opacity:0; padding-bottom:167%; position:absolute; text-align:center; top:10%; visibility:hidden; width:100%; z-index:101; }
+#howto #roasting.open {opacity:1; visibility:visible; }
+#howto #roasting h2 {margin-top:260px; font-size:75px; }
+#howto #roasting ol {list-style:none; margin:0; padding:0; }
+#howto #roasting ol li {font-size:36px; margin:20px 40px; padding:0; }
+#howto #roasting .close {cursor:pointer; display:block; height:70px; position:absolute; right:0; text-indent:-10000px; top:106px; width:70px;  }
+
+#howto a.pumpkin-ics {background:url('../_img/ics-pumpkin.png') center center no-repeat; bottom:0; display:block; height:101px; opacity:1; text-indent:-10000px; position:absolute; right:10%; visibility:visible; width:110px; z-index:5; }
+#howto a.pumpkin-ics:before {background:url('../_img/ics-pumpkin-hover.png') center center no-repeat; content:""; display:block; height:101px; left:0; opacity:0; position:absolute; text-indent:-10000px; top:0; visibility:hidden; width:110px; z-index:4; }
+#howto a.pumpkin-ics:hover:before {opacity:1; visibility:visible; }
+
+#instagram {background:url('../_img/texture.png') top left repeat, url('../_img/bg-social-bottom.png') bottom center / 100% no-repeat #f6921e; overflow:auto; padding-bottom:60px; }
+#instagram h1 {background:url('../_img/headline-hashtag.png') center center /contain no-repeat; display:block; height:0; margin:0 auto 30px; padding:0 0 10%; text-indent:-10000px; max-width:579px; }
+#instagram p {color:#fff; font-size:36px; font-weight:bold; }
+
+#instagram ul.feed {display:block; float:left; list-style:none; margin:0; padding:0; overflow:auto; width:100%; }
+#instagram ul.feed li {background:rgba(0,0,0,.5); display:block; float:left; height:0; margin:0 1% 1% 0; padding-bottom:24%; width:24%; }
+#instagram ul.feed li a {border:none; }
+#instagram ul.feed li a img {border:none; height:auto; max-width:100%; width:auto; }
+
+#ics {background:url('../_img/texture.png') top left repeat #fff; padding:30px; }
+#ics a {background:url('../_img/logo-ics.png') center top / contain no-repeat; color:#000; display:block; font-size:36px; font-weight:700; margin:0 auto; padding-top:190px; text-align:center; text-decoration:none; width:162px; }
+
+
+footer {background:url('../_img/texture.png') top left repeat, url('../_img/bg-footer-top.png') center top / 100% no-repeat #402b1b; padding:30px; }
+footer p {color:#fff; font-size:20px; font-weight:bold; padding:30px 0; text-align:center; }
+footer p a {color:#fff; text-decoration:none; }
+
+.overlay {background:rgba(0,0,0,.75); display:block; opacity:0; position:absolute; top:0; left:0; right:0; bottom:0; position:fixed; visibility:hidden; z-index:100; }
+.overlay.open {opacity:1; visibility:visible; }
+
+/* make sure headlines don't get huge on big screens */
+@media only screen and (min-width:579px){#instagram h1 {height:58px; margin-left:auto; margin-right:auto; padding-bottom:0; }}
+@media only screen and (min-width:609px){#howto #roasting {height:1020px; padding-bottom:0; left:50%; margin-left:-305px; }}
+@media only screen and (min-width:663px){#templates h1 {height:50px; margin-left:auto; margin-right:auto; padding-bottom:0; }}
+@media only screen and (min-width:722px){#header h1 {height:262px; margin-left:auto; margin-right:auto; padding-bottom:0; }}
+@media only screen and (min-width:852px){#header nav {height:135px; left:50%; margin-left:-426px; padding-bottom:0; }}
+
+@media only screen
+and (max-width:800px){
+	#memoriam h1:before {left:30%; }
+	#memoriam h1:after {right:30%; }
+	
+	#templates ul li {background-size:100%; margin-bottom:60px; margin-right:1%; padding-top:200px; width:190px; }
+
+	#howto header p {background-size:190px; padding:10.5% 0 7.5% 41.25%; }
+	#howto ul li {margin:0 20px 50px; }	
+	#howto a.hand {top:130px; }
+
+	#howto #roasting {top:100px; }
+}
+
+
+@media only screen
+and (max-width:400px){
+	.wrapper h1, .wrapper p {font-size:24px; margin:0 0 16px; }
+
+	#header nav {background-size:852px 135px; background-position:center bottom; height:135px; padding:0; top:10px; z-index:90; }
+	#header h1 {padding-top:200px; }
+	#header h2 {font-size:22px; }
+	
+	#memoriam h1:before,
+	#memoriam h1:after {display:none; }
+
+	#templates {padding:0; }
+	#templates h1 {margin:0 auto 24px; }
+	#templates ul li {margin: 0 0 30px; }
+
+	#howto {padding:30px 0; }
+	#howto h1 {margin:0 auto 24px; }
+	#howto header {background:transparent; color:#fff; height:auto; padding:0; }
+	#howto header p {background-position:center top; color:#fff;  padding:0; text-align:center; margin-bottom:40px; padding-top:210px; }
+
+	#howto ul {margin-top:260px; }
+	#howto ul li {height:0; margin:0; padding-bottom:80%; width:60%; }
+	#howto ul li figure {padding-top:102%; font-size:24px;}
+
+	#howto a.hand {top:440px; }
+	#howto a.hand:hover {width:260px; }
+	
+	#howto #roasting h2 {font-size:36px; margin-top:160px; }
+	#howto #roasting ol li {font-size:24px; margin:15px; padding:0; }
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

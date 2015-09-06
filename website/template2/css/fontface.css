@@ -1,0 +1,37 @@
+/* // COMMON // --------------------------------------------------- */
+
+@font-face {
+font-family: 'FuturaStd-Medium';
+src: url('../fonts/FuturaStd-Medium.eot');
+src: url('../fonts/FuturaStd-Mediumd41d.eot?#iefix') format('eot'),
+url('../fonts/FuturaStd-Medium.woff') format('woff'),
+url('../fonts/FuturaStd-Medium.ttf') format('truetype'),
+url('../fonts/FuturaStd-Medium.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'FuturaStd-Bold';
+src: url('../fonts/FuturaStd-Bold.eot');
+src: url('../fonts/FuturaStd-Boldd41d.eot?#iefix') format('eot'),
+url('../fonts/FuturaStd-Bold.woff') format('woff'),
+url('../fonts/FuturaStd-Bold.ttf') format('truetype'),
+url('../fonts/FuturaStd-Bold.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+@font-face {
+font-family: 'FuturaStd-Medium';
+src: url('../fonts/FuturaStd-Medium.svg') format('svg');
+
+}
+
+@font-face {
+font-family: 'FuturaStd-Bold';
+src: url('../fonts/FuturaStd-Bold.svg') format('svg');
+
+}
+}
