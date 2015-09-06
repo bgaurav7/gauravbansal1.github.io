@@ -40,52 +40,52 @@ a:before,
 
 .mfp-title {font-size:28px; line-height:100%; }
 
-#header {background:url('../_img/texture.png') top left repeat, url('../_img/clouds.svg') center 40px no-repeat #5A4A42; display:block; height:auto; overflow:hidden; padding-top:1px; position:relative; width:100%; }
-#header nav {background:url('../_img/bg-nav.svg') center center no-repeat; display:block; height:0; left:0; margin:0; max-width:852px; padding-bottom:15.8450704%; position:absolute; top:30px; width:100%; }
+#header {background:url('../img/texture.png') top left repeat, url('../img/clouds.svg') center 40px no-repeat #5A4A42; display:block; height:auto; overflow:hidden; padding-top:1px; position:relative; width:100%; }
+#header nav {background:url('../img/bg-nav.svg') center center no-repeat; display:block; height:0; left:0; margin:0; max-width:852px; padding-bottom:15.8450704%; position:absolute; top:30px; width:100%; }
 #header nav ul {bottom:0; list-style:none; margin:0; padding:0; position:absolute; text-align:center; width:100%; }
 #header nav ul li {display:inline-block; margin:0 36px; }
 #header nav ul li a {color:#fff; font-size:34px; text-decoration:none; }
-#header h1 {background:url('../_img/headline-tech-cemetery.svg') center center no-repeat; display:block; height:0; margin:21% auto 14%; max-width:722px; padding:0 0 36.2880886%; position:relative; text-indent:-10000px; width:96%; z-index:3; }
+#header h1 {background:url('../img/headline-tech-cemetery.svg') center center no-repeat; display:block; height:0; margin:21% auto 14%; max-width:722px; padding:0 0 36.2880886%; position:relative; text-indent:-10000px; width:96%; z-index:3; }
 #header h2 {color:#FFFCEA; display:block; font:48px/100% 'DukeFill',sans-serif; font-weight:normal; margin:0 auto 10px; max-width:400px; text-align:center; text-transform:uppercase; position:relative; width:100%; z-index:5; }
-#header .hills {background:url('../_img/hills.svg') bottom center no-repeat; bottom:0; height:0; left:0; padding-bottom:35.1182197%; position:absolute; width:100%; transform:scale(1.01); z-index:2; }
-#header .cemetery {background:url('../_img/cemetery.svg') bottom center no-repeat; bottom:-10px; height:0; left:0; padding-bottom:35.1955307%; position:absolute; width:100%; z-index:4; }
+#header .hills {background:url('../img/hills.svg') bottom center no-repeat; bottom:0; height:0; left:0; padding-bottom:35.1182197%; position:absolute; width:100%; transform:scale(1.01); z-index:2; }
+#header .cemetery {background:url('../img/cemetery.svg') bottom center no-repeat; bottom:-10px; height:0; left:0; padding-bottom:35.1955307%; position:absolute; width:100%; z-index:4; }
 
 #memoriam {background:#000; color:#fff; font-size:38px; font-weight:700; }
 #memoriam h1 {position:relative; }
-#memoriam h1:before {background:url('../_img/headline-left.png') center center no-repeat; background-size:66px 33px; content:""; display:block; height:33px; left:34%; position:absolute; top:8px; width:66px; }
-#memoriam h1:after {background:url('../_img/headline-right.png') center center no-repeat; background-size:66px 33px; content:""; display:block; height:33px; right:34%; position:absolute; top:8px; width:66px; }
+#memoriam h1:before {background:url('../img/headline-left.png') center center no-repeat; background-size:66px 33px; content:""; display:block; height:33px; left:34%; position:absolute; top:8px; width:66px; }
+#memoriam h1:after {background:url('../img/headline-right.png') center center no-repeat; background-size:66px 33px; content:""; display:block; height:33px; right:34%; position:absolute; top:8px; width:66px; }
 
-#templates {background:url('../_img/texture.png') top left repeat #fff; padding:40px 0; }
-#templates h1 {background:url('../_img/headline-departed.png') center center / contain no-repeat; display:block; height:0; margin:0 auto 100px; max-width:663px; padding-bottom:7.54147813%; text-indent:-10000px; width:100%; }
+#templates {background:url('../img/texture.png') top left repeat #fff; padding:40px 0; }
+#templates h1 {background:url('../img/headline-departed.png') center center / contain no-repeat; display:block; height:0; margin:0 auto 100px; max-width:663px; padding-bottom:7.54147813%; text-indent:-10000px; width:100%; }
 #templates ul {list-style:none; margin:0; padding:0; text-align:center; }
-#templates ul li {background:url('../_img/pump-mac.png') center top no-repeat; display:inline-block; font-size:36px; font-weight:700; margin:0 6.80851064% 120px; padding:244px 0 0; width:226px; }
+#templates ul li {background:url('../img/pump-mac.png') center top no-repeat; display:inline-block; font-size:36px; font-weight:700; margin:0 6.80851064% 120px; padding:244px 0 0; width:226px; }
 #templates ul li:nth-child(3n){margin-right:0;}
 #templates ul li:first-child,
 #templates ul li:nth-child(3n+1){margin-left:0;}
 
-#templates ul li.mac {background-image:url('../_img/pump-mac.png'); }
-#templates ul li.aol {background-image:url('../_img/pump-aol.png'); }
-#templates ul li.palm {background-image:url('../_img/pump-palm.png'); }
-#templates ul li.atari {background-image:url('../_img/pump-atari.png'); }
-#templates ul li.sony {background-image:url('../_img/pump-sony.png'); }
-#templates ul li.floppy {background-image:url('../_img/pump-floppy.png'); }
-#templates ul li.dos {background-image:url('../_img/pump-dos.png'); }
-#templates ul li.moto {background-image:url('../_img/pump-moto.png'); }
-#templates ul li.vhs {background-image:url('../_img/pump-vhs.png'); }
-#templates ul li.pager {background-image:url('../_img/pump-pager.png'); }
-#templates ul li.polaroid {background-image:url('../_img/pump-polaroid.png'); }
-#templates ul li.netscape {background-image:url('../_img/pump-netscape.png'); }
+#templates ul li.mac {background-image:url('../img/pump-mac.png'); }
+#templates ul li.aol {background-image:url('../img/pump-aol.png'); }
+#templates ul li.palm {background-image:url('../img/pump-palm.png'); }
+#templates ul li.atari {background-image:url('../img/pump-atari.png'); }
+#templates ul li.sony {background-image:url('../img/pump-sony.png'); }
+#templates ul li.floppy {background-image:url('../img/pump-floppy.png'); }
+#templates ul li.dos {background-image:url('../img/pump-dos.png'); }
+#templates ul li.moto {background-image:url('../img/pump-moto.png'); }
+#templates ul li.vhs {background-image:url('../img/pump-vhs.png'); }
+#templates ul li.pager {background-image:url('../img/pump-pager.png'); }
+#templates ul li.polaroid {background-image:url('../img/pump-polaroid.png'); }
+#templates ul li.netscape {background-image:url('../img/pump-netscape.png'); }
 
-#howto {background:url('../_img/texture.png') top left repeat, url('../_img/bg-how-top.png') center top / 100% no-repeat, url('../_img/bg-how-bottom.png') center bottom / 100% no-repeat #7b6e67; padding:60px 0; position:relative; }
-#howto h1 {background:url('../_img/headline-how.png') center center / contain no-repeat; display:block; height:60px; margin:0 auto 40px; text-indent:-10000px; width:279px; }
+#howto {background:url('../img/texture.png') top left repeat, url('../img/bg-how-top.png') center top / 100% no-repeat, url('../img/bg-how-bottom.png') center bottom / 100% no-repeat #7b6e67; padding:60px 0; position:relative; }
+#howto h1 {background:url('../img/headline-how.png') center center / contain no-repeat; display:block; height:60px; margin:0 auto 40px; text-indent:-10000px; width:279px; }
 #howto p {color:#fff; }
-#howto header {background:url('../_img/bg-tools.png') center center / contain no-repeat; display:block; height:0; margin:0 auto; max-width:800px; padding:0 0 32.5%; width:100%; }
-#howto header p {background:url('../_img/tools.png') 9.75% center / 218px 190px no-repeat; color:#111; padding:12.5% 0 12.5% 41.25%; text-align:left; }
+#howto header {background:url('../img/bg-tools.png') center center / contain no-repeat; display:block; height:0; margin:0 auto; max-width:800px; padding:0 0 32.5%; width:100%; }
+#howto header p {background:url('../img/tools.png') 9.75% center / 218px 190px no-repeat; color:#111; padding:12.5% 0 12.5% 41.25%; text-align:left; }
 
 #howto ul {list-style:none; margin:0; padding:0; position:relative; text-align:center; }
 #howto ul li { cursor:pointer; display:inline-block; height:300px; margin:0 166px 120px 0; padding:32px 0 0; position:relative; vertical-align:top; width:300px; z-index:1; }
 #howto ul li:nth-child(2n){margin-right:0; }
-#howto ul li .num {background:url('../_img/num-1.png') center center / contain no-repeat; display:block; height:100px; position:absolute; text-align:left; text-indent:-10000px; top:0; right:-14px; width:100px; z-index:5; }
+#howto ul li .num {background:url('../img/num-1.png') center center / contain no-repeat; display:block; height:100px; position:absolute; text-align:left; text-indent:-10000px; top:0; right:-14px; width:100px; z-index:5; }
 #howto ul li .card {height:100%; position:relative; width:100%; z-index:4; }
 #howto ul li .card figure {height:60%; position: absolute; width: 100%; }
 #howto ul li .card figure.front {display: block; }
@@ -150,39 +150,39 @@ transform:perspective(800px) rotateY(180deg);
 transform:perspective(800px) rotateY(0);
 }
 
-#howto ul li figure {background:url('../_img/step-1.png') top left / contain no-repeat; color:#fff; font-size:36px; font-weight:bold; margin:0; padding:324px 0 0; }
-#howto ul li figure.back {background-image:url('../_img/step-1-back.png'); }
-#howto ul li:nth-child(2) .num {background-image:url('../_img/num-2.png'); }
-#howto ul li:nth-child(3) .num {background-image:url('../_img/num-3.png'); }
-#howto ul li:nth-child(4) .num {background-image:url('../_img/num-4.png'); }
-#howto ul li:nth-child(5) .num {background-image:url('../_img/num-5.png'); }
-#howto ul li:nth-child(6) .num {background-image:url('../_img/num-6.png'); }
-#howto ul li:nth-child(2) figure {background-image:url('../_img/step-2.png'); }
-#howto ul li:nth-child(3) figure {background-image:url('../_img/step-3.png'); }
-#howto ul li:nth-child(4) figure {background-image:url('../_img/step-4.png'); }
-#howto ul li:nth-child(5) figure {background-image:url('../_img/step-5.png'); }
-#howto ul li:nth-child(6) figure {background-image:url('../_img/step-6.png'); }
-#howto ul li:nth-child(2) figure.back {background-image:url('../_img/step-2-back.png'); }
-#howto ul li:nth-child(3) figure.back {background-image:url('../_img/step-3-back.png'); }
-#howto ul li:nth-child(4) figure.back {background-image:url('../_img/step-4-back.png'); }
-#howto ul li:nth-child(5) figure.back {background-image:url('../_img/step-5-back.png'); }
-#howto ul li:nth-child(6) figure.back {background-image:url('../_img/step-6-back.png'); }
+#howto ul li figure {background:url('../img/step-1.png') top left / contain no-repeat; color:#fff; font-size:36px; font-weight:bold; margin:0; padding:324px 0 0; }
+#howto ul li figure.back {background-image:url('../img/step-1-back.png'); }
+#howto ul li:nth-child(2) .num {background-image:url('../img/num-2.png'); }
+#howto ul li:nth-child(3) .num {background-image:url('../img/num-3.png'); }
+#howto ul li:nth-child(4) .num {background-image:url('../img/num-4.png'); }
+#howto ul li:nth-child(5) .num {background-image:url('../img/num-5.png'); }
+#howto ul li:nth-child(6) .num {background-image:url('../img/num-6.png'); }
+#howto ul li:nth-child(2) figure {background-image:url('../img/step-2.png'); }
+#howto ul li:nth-child(3) figure {background-image:url('../img/step-3.png'); }
+#howto ul li:nth-child(4) figure {background-image:url('../img/step-4.png'); }
+#howto ul li:nth-child(5) figure {background-image:url('../img/step-5.png'); }
+#howto ul li:nth-child(6) figure {background-image:url('../img/step-6.png'); }
+#howto ul li:nth-child(2) figure.back {background-image:url('../img/step-2-back.png'); }
+#howto ul li:nth-child(3) figure.back {background-image:url('../img/step-3-back.png'); }
+#howto ul li:nth-child(4) figure.back {background-image:url('../img/step-4-back.png'); }
+#howto ul li:nth-child(5) figure.back {background-image:url('../img/step-5-back.png'); }
+#howto ul li:nth-child(6) figure.back {background-image:url('../img/step-6-back.png'); }
 
-#howto a.hand {background:url('../_img/trigger-recipe.png') left center / cover no-repeat; cursor:pointer; display:block; height:142px; position:absolute; right:0; top:880px; text-align:left; text-indent:-10000px; width:260px; z-index:99; }
+#howto a.hand {background:url('../img/trigger-recipe.png') left center / cover no-repeat; cursor:pointer; display:block; height:142px; position:absolute; right:0; top:880px; text-align:left; text-indent:-10000px; width:260px; z-index:99; }
 #howto a.hand:hover {width:310px; }
-#howto #roasting {background:url('../_img/bg-recipe.png') center top / contain no-repeat; color:#fff; font-weight:bold; left:0; margin:0 auto; max-width:609px; opacity:0; padding-bottom:167%; position:absolute; text-align:center; top:10%; visibility:hidden; width:100%; z-index:101; }
+#howto #roasting {background:url('../img/bg-recipe.png') center top / contain no-repeat; color:#fff; font-weight:bold; left:0; margin:0 auto; max-width:609px; opacity:0; padding-bottom:167%; position:absolute; text-align:center; top:10%; visibility:hidden; width:100%; z-index:101; }
 #howto #roasting.open {opacity:1; visibility:visible; }
 #howto #roasting h2 {margin-top:260px; font-size:75px; }
 #howto #roasting ol {list-style:none; margin:0; padding:0; }
 #howto #roasting ol li {font-size:36px; margin:20px 40px; padding:0; }
 #howto #roasting .close {cursor:pointer; display:block; height:70px; position:absolute; right:0; text-indent:-10000px; top:106px; width:70px;  }
 
-#howto a.pumpkin-ics {background:url('../_img/ics-pumpkin.png') center center no-repeat; bottom:0; display:block; height:101px; opacity:1; text-indent:-10000px; position:absolute; right:10%; visibility:visible; width:110px; z-index:5; }
-#howto a.pumpkin-ics:before {background:url('../_img/ics-pumpkin-hover.png') center center no-repeat; content:""; display:block; height:101px; left:0; opacity:0; position:absolute; text-indent:-10000px; top:0; visibility:hidden; width:110px; z-index:4; }
+#howto a.pumpkin-ics {background:url('../img/ics-pumpkin.png') center center no-repeat; bottom:0; display:block; height:101px; opacity:1; text-indent:-10000px; position:absolute; right:10%; visibility:visible; width:110px; z-index:5; }
+#howto a.pumpkin-ics:before {background:url('../img/ics-pumpkin-hover.png') center center no-repeat; content:""; display:block; height:101px; left:0; opacity:0; position:absolute; text-indent:-10000px; top:0; visibility:hidden; width:110px; z-index:4; }
 #howto a.pumpkin-ics:hover:before {opacity:1; visibility:visible; }
 
-#instagram {background:url('../_img/texture.png') top left repeat, url('../_img/bg-social-bottom.png') bottom center / 100% no-repeat #f6921e; overflow:auto; padding-bottom:60px; }
-#instagram h1 {background:url('../_img/headline-hashtag.png') center center /contain no-repeat; display:block; height:0; margin:0 auto 30px; padding:0 0 10%; text-indent:-10000px; max-width:579px; }
+#instagram {background:url('../img/texture.png') top left repeat, url('../img/bg-social-bottom.png') bottom center / 100% no-repeat #f6921e; overflow:auto; padding-bottom:60px; }
+#instagram h1 {background:url('../img/headline-hashtag.png') center center /contain no-repeat; display:block; height:0; margin:0 auto 30px; padding:0 0 10%; text-indent:-10000px; max-width:579px; }
 #instagram p {color:#fff; font-size:36px; font-weight:bold; }
 
 #instagram ul.feed {display:block; float:left; list-style:none; margin:0; padding:0; overflow:auto; width:100%; }
@@ -190,11 +190,11 @@ transform:perspective(800px) rotateY(0);
 #instagram ul.feed li a {border:none; }
 #instagram ul.feed li a img {border:none; height:auto; max-width:100%; width:auto; }
 
-#ics {background:url('../_img/texture.png') top left repeat #fff; padding:30px; }
-#ics a {background:url('../_img/logo-ics.png') center top / contain no-repeat; color:#000; display:block; font-size:36px; font-weight:700; margin:0 auto; padding-top:190px; text-align:center; text-decoration:none; width:162px; }
+#ics {background:url('../img/texture.png') top left repeat #fff; padding:30px; }
+#ics a {background:url('../img/logo-ics.png') center top / contain no-repeat; color:#000; display:block; font-size:36px; font-weight:700; margin:0 auto; padding-top:190px; text-align:center; text-decoration:none; width:162px; }
 
 
-footer {background:url('../_img/texture.png') top left repeat, url('../_img/bg-footer-top.png') center top / 100% no-repeat #402b1b; padding:30px; }
+footer {background:url('../img/texture.png') top left repeat, url('../img/bg-footer-top.png') center top / 100% no-repeat #402b1b; padding:30px; }
 footer p {color:#fff; font-size:20px; font-weight:bold; padding:30px 0; text-align:center; }
 footer p a {color:#fff; text-decoration:none; }
 
