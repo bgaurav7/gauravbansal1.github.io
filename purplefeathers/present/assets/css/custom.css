@@ -10,11 +10,11 @@
 }
 
 body{
-  scrollbar-base-color: #B503BA;  
+  scrollbar-base-color: #B503BA;
   scrollbar-track-color: #000;
  }
 
- video { 
+ video {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -414,4 +414,10 @@ body{
   transition: 600ms, opacity, ease-out;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
+}
+#mainCaptcha {
+	background-color: black;
+}
+#txtInput {
+	background-color: black;
 }

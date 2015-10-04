@@ -61,7 +61,7 @@ function App() {
 		// $.ajax({
 		// 	url: self.feedUrl,
 		// 	type: 'GET',
-		// 	dataType: 'json', 
+		// 	dataType: 'json',
 		// 	complete: function(xhr, textStatus) {
 		// 	},
 		// 	success: function(data, textStatus, xhr) {
@@ -74,7 +74,7 @@ function App() {
 
 	// add media elements to the DOM
 	this.addToDOM = function(d) {
-		var htmlImage = '<a href="#" class="cell image" data-id-media="{id-media}"><div class="detail"><div class="close"><span></span></div><div class="image-detail"></div><div class="tl"></div><div class="bl"></div><div class="tr"></div></div><div class="info"><div class="w"><h2>{title}</h2></div></div><div class="image"><img src="{img-src}"></div></a>', 
+		var htmlImage = '<a href="#" class="cell image" data-id-media="{id-media}"><div class="detail"><div class="close"><span></span></div><div class="image-detail"></div><div class="tl"></div><div class="bl"></div><div class="tr"></div></div><div class="info"><div class="w"><h2>{title}</h2></div></div><div class="image"><img src="{img-src}"></div></a>',
 			nroMedia = d.media.length;
 
 		$.each(d.media, function(i, v) {
@@ -113,9 +113,9 @@ function App() {
 
 	// open a media element
 	this.openMedia = function(m) {
-		var $cellMedia = $("a[data-id-media='" + m.id + "']"), 
-			$detail = $cellMedia.find('.detail'), 
-			htmlImage = '<img src="{img-src}" />', 
+		var $cellMedia = $("a[data-id-media='" + m.id + "']"),
+			$detail = $cellMedia.find('.detail'),
+			htmlImage = '<img src="{img-src}" />',
 			waitForIt = 0;
 
 		// if a media element is open will close it first
@@ -138,7 +138,7 @@ function App() {
 
 	// close a media element
 	this.closeMedia = function(m) {
-		var $cellMedia = $("a[data-id-media='" + m + "']"), 
+		var $cellMedia = $("a[data-id-media='" + m + "']"),
 			$detail = $cellMedia.find('.detail');
 
 		$detail.addClass('close');
@@ -155,8 +155,8 @@ function App() {
 
 	// resize handler for fluid grid
 	this.resizeHandler = function() {
-		var c = 0, 
-			r = 0, 
+		var c = 0,
+			r = 0,
 			widthCell = Math.ceil(self.window.width() / 5);
 
 		$.each(self.cellElement, function(i, v) {
@@ -176,4 +176,4 @@ var Gallery;
 
 $(window).load(function() {
 	Gallery = new App();
-});	
+});
