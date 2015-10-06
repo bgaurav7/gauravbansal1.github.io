@@ -119,8 +119,7 @@
 
                   <div class="col-sm-12 af-outer af-required">
                       <div class="form-group af-inner">
-                          <input
-                                  type="text" name="name" id="name" placeholder="Type Your Name..." value="" size="30"
+                          <input type="text" name="name" id="name" placeholder="Type Your Name..." value="" size="30"
                                   data-toggle="tooltip" title="Name is required"
                                   class="form-control placeholder"/>
                       </div>
@@ -128,8 +127,7 @@
 
                   <div class="col-sm-12 af-outer af-required">
                       <div class="form-group af-inner">
-                          <input
-                                  type="text" name="email" id="email" placeholder="Type Your Email..." value="" size="30"
+                          <input type="text" name="email" id="email" placeholder="Type Your Email..." value="" size="30"
                                   data-toggle="tooltip" title="Email is required"
                                   class="form-control placeholder"/>
                       </div>
@@ -137,21 +135,28 @@
 
                   <div class="col-sm-12 af-outer af-required">
                       <div class="form-group af-inner">
-                          <textarea
-                                  name="message" id="input-message" placeholder="Type Your Message..." rows="4" cols="50"
+                          <textarea name="message" id="input-message" placeholder="Type Your Message..." rows="4" cols="50"
                                   data-toggle="tooltip" title="Message is required"
                                   class="form-control placeholder"></textarea>
                       </div>
                   </div>
 
                   <div class="col-sm-12 af-outer af-required">
-<div class="af-inner">                             <h3>Or give us a call</h3>
-+919999999999                         </div>                     </div>
+                      <div class="af-inner">
+                          <h3>Or give us a call</h3>+919999999999
+                      </div>
+                  </div>
 
+                  <div class="col-sm-12 af-outer af-required">
+                      <div class="af-inner">
+                         <input type="text" id="mainCaptcha"></input>
+                         <input type="text" name="captcha" id="txtInput" placeholder="captcha here"></input>
+                      </div>
+                  </div>
 
                   <div class="col-sm-12 af-outer af-required text-center">
                       <div class="form-group af-inner">
-                          <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" id="submit_btn" value="Send message" />
+                          <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" id="submit_btn" value="Send message" onclick="validCaptcha();" />
                       </div>
                   </div>
 
@@ -230,6 +235,9 @@
     </script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/media.js"></script>
+    <script src="assets/js/contact.js"></script>
+
+    </script>
     <script type="text/javascript">
     $(window).load(function() {
         $('.post-title').click(function() {
