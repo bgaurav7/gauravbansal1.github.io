@@ -1,3 +1,15 @@
+<?php
+  require_once("config/config.php");
+  require_once("api/mailFunctions.php");
+
+  if(isset($_POST['name']) && (!empty($_POST['name'])) && isset($_POST['email']) && (!empty($_POST['email'])) && isset($_POST['message']) && (!empty($_POST['message']))) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $msg = $_POST['message'];
+    sendThankMail($email, $name);
+  }
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
@@ -49,7 +61,7 @@
 <div class="wrapper">
 
     <!-- HEADER -->
-    <header class="header fixed">
+    <header class="headerc fixed shrink">
         <div class="container">
             <div class="header-wrapper clearfix">
 
@@ -69,7 +81,13 @@
             <nav class="navigation closed clearfix">
                 <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
                 <ul class="sf-menu nav">
-                    <li class="active"><a href="index.php">Home</a></li>
+                    <li><a href="index.php#home">Home</a></li>
+                    <li><a href="index.php#about">About</a></li>
+                    <li><a href="index.php#events">Events</a></li>
+                    <li><a href="index.php#clients">Clients</a></li>
+                    <li><a href="index.php#team">Team</a></li>
+                    <!--li><a href="#price">Price</a></li-->
+                    <li class="active"><a href="#location">Location</a></li>
                     <li><a href="#contact">Contact us</a></li>
                 </ul>
             </nav>
@@ -115,7 +133,7 @@
               </h1>
 
               <!-- Contact form -->
-              <form name="af-form" method="post" action="#contact" class="af-form row" id="af-form">
+              <form method="post" action="contact.php">
 
                   <div class="col-sm-12 af-outer af-required">
                       <div class="form-group af-inner">
@@ -143,20 +161,13 @@
 
                   <div class="col-sm-12 af-outer af-required">
                       <div class="af-inner">
-                          <h3>Or give us a call</h3>+919999999999
+                          <h3 style="color:white;">Or give us a call</h3>+919999999999
                       </div>
-                  </div>
-
-                  <div class="col-sm-12 af-outer af-required">
-                      <div class="af-inner">
-                         <input type="text" id="mainCaptcha"></input>
-                         <input type="text" name="captcha" id="txtInput" placeholder="captcha here"></input>
-                      </div>
-                  </div>
+                  </div>                  
 
                   <div class="col-sm-12 af-outer af-required text-center">
                       <div class="form-group af-inner">
-                          <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" id="submit_btn" value="Send message" onclick="validCaptcha();" />
+                          <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" id="submit_btn" value="Send message"/>
                       </div>
                   </div>
 

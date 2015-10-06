@@ -75,8 +75,8 @@
                     <li><a href="#clients">Clients</a></li>
                     <li><a href="#team">Team</a></li>
                     <!--li><a href="#price">Price</a></li-->
-                    <li><a href="#location">Location</a></li>
-                    <li><a href="#contact">Contact us</a></li>
+                    <li><a href="contact.php#location">Location</a></li>
+                    <li><a href="contact.php#contact">Contact us</a></li>
                 </ul>
             </nav>
             <!-- /Navigation -->
@@ -2834,7 +2834,7 @@
             </div>
         </section>
 
-        <!-- PAGE LOCATION -->
+        <!-- PAGE LOCATION 
         <section class="page-section" id="location">
             <div class="container full-width gmap-background">
 
@@ -2854,17 +2854,17 @@
                     </div>
                 </div>
 
-                <!-- Google map -->
+                <!-- Google map 
                 <div class="google-map">
                     <div id="map-canvas"></div>
                 </div>
-                <!-- /Google map -->
+                <!-- /Google map 
 
             </div>
         </section>
         <!-- /PAGE LOCATION -->
 
-        <!-- PAGE CONTACT -->
+        <!-- PAGE CONTACT 
         <section class="page-section color" id="contact">
             <div class="container">
 
@@ -2873,7 +2873,7 @@
                     <span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Contact Us <small>/ We would love if you contact us.</small></span>
                 </h1>
 
-                <!-- Contact form -->
+                <!-- Contact form 
                 <form name="af-form" method="post" action="#contact" class="af-form row" id="af-form">
 
                     <div class="col-sm-12 af-outer af-required">
@@ -2915,7 +2915,7 @@
                     </div>
 
                 </form>
-                <!-- /Contact form -->
+                <!-- /Contact form 
 
             </div>
         </section>
