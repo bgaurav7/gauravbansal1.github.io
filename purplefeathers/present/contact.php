@@ -96,7 +96,7 @@
             </div>
         </div>
     </header>
-    <div style="width:auto;height:100px;"></div>
+    <div style="width:auto;height:150px;"></div>
     <div class="content-area">
       <section class="page-section" id="location">
           <div class="container full-width gmap-background">
@@ -192,7 +192,7 @@
                         <li data-animation="flipInY" data-animation-delay="700"><a href="#" class="skype"><i class="fa fa-skype"></i></a></li>
                     </ul>
                 </div>
-                <span class="copyright" data-animation="fadeInUp" data-animation-delay="100">&copy; 2015 GeekHaven</span>
+                <span class="copyright" data-animation="fadeInUp" data-animation-delay="100"></span>
             </div>
         </div>
     </footer>
