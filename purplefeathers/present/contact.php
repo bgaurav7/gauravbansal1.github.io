@@ -1,14 +1,3 @@
-<?php
-  // require_once("config/config.php");
-  // require_once("api/mailFunctions.php");
-  //
-  // if(isset($_POST['name']) && (!empty($_POST['name'])) && isset($_POST['email']) && (!empty($_POST['email'])) && isset($_POST['message']) && (!empty($_POST['message']))) {
-  //   $name = $_POST['name'];
-  //   $email = $_POST['email'];
-  //   $msg = $_POST['message'];
-  //   sendThankMail($email, $name);
-  // }
-?>
 
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]-->
@@ -41,14 +30,20 @@
     <link href="assets/css/theme.css" rel="stylesheet">
 
     <link href="assets/css/custom.css" rel="stylesheet">
-
+    <style type="text/css">
+      .error{
+          color:red;
+          border-color:red;
+      }
+    </style>
     <!--[if lt IE 9]>
     <script src="assets/plugins/iesupport/html5shiv.js"></script>
     <script src="assets/plugins/iesupport/respond.min.js"></script>
     <![endif]-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
-<body id="home" class="wide body-dark">
+<body id="home" class="wide body-dark" style="overflow-x:hidden;">
 
 <!-- Preloader -->
 <div id="preloader">
@@ -61,7 +56,7 @@
 <div class="wrapper">
 
     <!-- HEADER -->
-    <header class="header fixed" style="height:67px;">
+    <header class="headerc fixed shrink">
         <div class="container">
             <div class="header-wrapper clearfix">
 
@@ -69,7 +64,7 @@
             <div class="logo">
                 <a href="#home" class="scroll-to">
                     <span class="fa-stack">
-                        <img src="img/logo.png" style="height:100%;padding-bottom:10%;min-height:50px;"/>
+                        <img src="img/logo.png" style="height:100%;padding-bottom:10%;"/>
                     </span>
                     <span style="color:white;font-family:'als';font-size:1.12em;">Purple Feathers</span>
                 </a>
@@ -82,11 +77,12 @@
                 <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
                 <ul class="sf-menu nav">
                     <li><a href="index.php#home">Home</a></li>
-                    <li><a href="indx.php#about">About</a></li>
-                    <li><a href="events.php#events">Events</a></li>
+                    <li><a href="index.php#about">About</a></li>
+                    <li><a href="events.php">Events</a></li>
                     <li><a href="index.php#clients">Clients</a></li>
                     <li><a href="index.php#team">Team</a></li>
-                    <li><a href="#location">Location</a></li>
+                    <!--li><a href="#price">Price</a></li-->
+                    <li class="active"><a href="#location">Location</a></li>
                     <li><a href="#contact">Contact us</a></li>
                 </ul>
             </nav>
@@ -95,7 +91,6 @@
             </div>
         </div>
     </header>
-    <!-- <div style="width:auto;height:150px;"></div> -->
     <div class="content-area">
       <section class="page-section" id="location">
           <div class="container full-width gmap-background">
@@ -133,29 +128,41 @@
               </h1>
 
               <!-- Contact form -->
-              <form method="post" action="contact.php">
+              <form method="post" action="api/contact-form.php" id="contactForm">
 
                   <div class="col-sm-12 af-outer af-required">
                       <div class="form-group af-inner">
-                          <input type="text" name="name" id="name" placeholder="Type Your Name..." value="" size="30"
+                        <label>Name *</label>
+                          <input type="text" name="name" id="name" value="" size="30"
                                   data-toggle="tooltip" title="Name is required"
-                                  class="form-control placeholder"/>
+                                  class="form-control"/>
                       </div>
                   </div>
 
                   <div class="col-sm-12 af-outer af-required">
                       <div class="form-group af-inner">
-                          <input type="text" name="email" id="email" placeholder="Type Your Email..." value="" size="30"
+                        <label>Email ID *</label>
+                          <input type="text" name="email" id="email" value="" size="30"
                                   data-toggle="tooltip" title="Email is required"
-                                  class="form-control placeholder"/>
+                                  class="form-control"/>
                       </div>
                   </div>
 
                   <div class="col-sm-12 af-outer af-required">
                       <div class="form-group af-inner">
-                          <textarea name="message" id="input-message" placeholder="Type Your Message..." rows="4" cols="50"
+                        <label>Contact No.*</label>
+                          <input type="text" name="phone" id="phone" value="" size="30"
+                                  data-toggle="tooltip" title="Contact No is required"
+                                  class="form-control"/>
+                      </div>
+                  </div>
+
+                  <div class="col-sm-12 af-outer af-required">
+                      <div class="form-group af-inner">
+                        <label>Message *</label>
+                          <textarea name="message" id="input-message" rows="4" cols="50"
                                   data-toggle="tooltip" title="Message is required"
-                                  class="form-control placeholder"></textarea>
+                                  class="form-control"></textarea>
                       </div>
                   </div>
 
@@ -164,6 +171,8 @@
                           <h3 style="color:white;">Or give us a call</h3>+919999999999
                       </div>
                   </div>
+
+                  <div class="g-recaptcha col-sm-12 af-outer" style="margin:2% 35%;" data-sitekey="6LfUTw4TAAAAAHD0uDBtWbI4_KVios6u7oHvy3LM"></div>                  
 
                   <div class="col-sm-12 af-outer af-required text-center">
                       <div class="form-group af-inner">
@@ -174,6 +183,20 @@
               </form>
               <!-- /Contact form -->
 
+
+          </div>
+          
+          <div class="alert alert-success" id="formSuc" style="margin: 0 10%;display:none;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> Your message has been sent.
+          </div>
+          <div class="alert alert-danger" id="formErr" style="margin: 0 10%;display:none;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Error!</strong> There was an error sending your message. Please try later.
+          </div>
+          <div class="alert alert-danger" id="formCErr" style="margin: 0 10%;display:none;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Error!</strong> There was an error in captcha.
           </div>
       </section>
     </div>
@@ -191,13 +214,11 @@
                         <li data-animation="flipInY" data-animation-delay="700"><a href="#" class="skype"><i class="fa fa-skype"></i></a></li>
                     </ul>
                 </div>
-                <span class="copyright" data-animation="fadeInUp" data-animation-delay="100"></span>
+                <span class="copyright" data-animation="fadeInUp" data-animation-delay="100">&copy; 2015 GeekHaven</span>
             </div>
         </div>
     </footer>
     <!-- /FOOTER -->
-
-    <div class="to-top"><i class="fa fa-angle-up"></i></div>
   </div>
 
 
@@ -213,6 +234,7 @@
     <script src="assets/plugins/placeholdem.min.js"></script>
     <script src="assets/plugins/jquery.smoothscroll.min.js"></script>
     <script src="assets/plugins/jquery.easing.min.js"></script>
+    <script src="assets/plugins/jquery.validate.js"></script>
 
     <!-- JS Page Level -->
     <script src="assets/plugins/owlcarousel2/owl.carousel.min.js"></script>
@@ -228,6 +250,46 @@
     <!--[if (gte IE 9)|!(IE)]><!-->
     <script src="assets/plugins/jquery.cookie.js"></script>
     <!--<![endif]-->
+
+    <script type="text/javascript">
+      $("#contactForm").validate({
+          submitHandler: function (form) {
+              var url = $(form).attr("action");
+              var formData = $(form).serializeArray();
+              $.post(url, formData).done(function (data) {
+                  console.log(data.trim());
+                  if(data.trim() == 'y') {
+                    $('#formSuc').css("display", "block");
+                    $('#formCErr').css("display", "none");
+                    $('#formErr').css("display", "none");
+                  } else if(data.trim() == 'c') {
+                    $('#formSuc').css("display", "none");
+                    $('#formCErr').css("display", "block");
+                    $('#formErr').css("display", "none");
+                  } else {
+                    $('#formSuc').css("display", "none");
+                    $('#formCErr').css("display", "none");
+                    $('#formErr').css("display", "block");
+                  }
+              });
+              // your ajax here
+              //console.log("fire ajax");
+              return false;
+          },
+          rules: {
+              name: "required",
+              email: "required",
+              phone: "required",
+              message: "required"
+          },
+          messages: {
+              name: "Name is required",
+              email: "Email is required",
+              phone: "Conatct No is required",
+              message: "Message is required"
+          }
+      });
+    </script>
 
     <script type="text/javascript">
 
