@@ -1,13 +1,13 @@
 <?php
-  require_once("config/config.php");
-  require_once("api/mailFunctions.php");
-
-  if(isset($_POST['name']) && (!empty($_POST['name'])) && isset($_POST['email']) && (!empty($_POST['email'])) && isset($_POST['message']) && (!empty($_POST['message']))) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $msg = $_POST['message'];
-    sendThankMail($email, $name);
-  }
+  // require_once("config/config.php");
+  // require_once("api/mailFunctions.php");
+  //
+  // if(isset($_POST['name']) && (!empty($_POST['name'])) && isset($_POST['email']) && (!empty($_POST['email'])) && isset($_POST['message']) && (!empty($_POST['message']))) {
+  //   $name = $_POST['name'];
+  //   $email = $_POST['email'];
+  //   $msg = $_POST['message'];
+  //   sendThankMail($email, $name);
+  // }
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +61,7 @@
 <div class="wrapper">
 
     <!-- HEADER -->
-    <header class="headerc fixed shrink">
+    <header class="header fixed" style="height:67px;">
         <div class="container">
             <div class="header-wrapper clearfix">
 
@@ -69,7 +69,7 @@
             <div class="logo">
                 <a href="#home" class="scroll-to">
                     <span class="fa-stack">
-                        <img src="img/logo.png" style="height:100%;padding-bottom:10%;"/>
+                        <img src="img/logo.png" style="height:100%;padding-bottom:10%;min-height:50px;"/>
                     </span>
                     <span style="color:white;font-family:'als';font-size:1.12em;">Purple Feathers</span>
                 </a>
@@ -82,12 +82,11 @@
                 <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
                 <ul class="sf-menu nav">
                     <li><a href="index.php#home">Home</a></li>
-                    <li><a href="index.php#about">About</a></li>
-                    <li><a href="index.php#events">Events</a></li>
+                    <li><a href="indx.php#about">About</a></li>
+                    <li><a href="events.php#events">Events</a></li>
                     <li><a href="index.php#clients">Clients</a></li>
                     <li><a href="index.php#team">Team</a></li>
-                    <!--li><a href="#price">Price</a></li-->
-                    <li class="active"><a href="#location">Location</a></li>
+                    <li><a href="#location">Location</a></li>
                     <li><a href="#contact">Contact us</a></li>
                 </ul>
             </nav>
@@ -96,7 +95,7 @@
             </div>
         </div>
     </header>
-    <div style="width:auto;height:150px;"></div>
+    <!-- <div style="width:auto;height:150px;"></div> -->
     <div class="content-area">
       <section class="page-section" id="location">
           <div class="container full-width gmap-background">
@@ -164,7 +163,7 @@
                       <div class="af-inner">
                           <h3 style="color:white;">Or give us a call</h3>+919999999999
                       </div>
-                  </div>                  
+                  </div>
 
                   <div class="col-sm-12 af-outer af-required text-center">
                       <div class="form-group af-inner">

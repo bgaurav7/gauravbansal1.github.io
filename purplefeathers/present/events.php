@@ -49,7 +49,7 @@
 <div class="wrapper">
 
     <!-- HEADER -->
-    <header class="header fixed">
+    <header class="header fixed" style="height:67px">
         <div class="container">
             <div class="header-wrapper clearfix">
 
@@ -57,7 +57,7 @@
             <div class="logo">
                 <a href="#home" class="scroll-to">
                     <span class="fa-stack">
-                        <img src="img/logo.png" style="height:100%;padding-bottom:10%;"/>
+                        <img src="img/logo.png" style="height:100%;padding-bottom:10%;min-height:50px;"/>
                     </span>
                     <span style="color:white;font-family:'als';font-size:1.12em;">Purple Feathers</span>
                 </a>
@@ -69,8 +69,13 @@
             <nav class="navigation closed clearfix">
                 <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
                 <ul class="sf-menu nav">
-                    <li class="active"><a href="index.php">Home</a></li>
-                    <li><a href="#contact">Contact us</a></li>
+                    <li><a href="index.php#home">Home</a></li>
+                    <li><a href="index.php#about">About</a></li>
+                    <li class="active"><a href="#events">Events</a></li>
+                    <li><a href="index.php#clients">Clients</a></li>
+                    <li><a href="index.php#team">Team</a></li>
+                    <li><a href="contact.php#location">Location</a></li>
+                    <li><a href="contact.php#contact">Contact us</a></li>
                 </ul>
             </nav>
             <!-- /Navigation -->
@@ -1941,7 +1946,7 @@
                         <li data-animation="flipInY" data-animation-delay="700"><a href="#" class="skype"><i class="fa fa-skype"></i></a></li>
                     </ul>
                 </div>
-                <span class="copyright" data-animation="fadeInUp" data-animation-delay="100">&copy; 2015 GeekHaven</span>
+                <span class="copyright" data-animation="fadeInUp" data-animation-delay="100"></span>
             </div>
         </div>
     </footer>
