@@ -10,7 +10,7 @@
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Contact us</title>
+    <title>Events</title>
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="img/favicon.png">
@@ -49,7 +49,7 @@
 <div class="wrapper">
 
     <!-- HEADER -->
-    <header class="header fixed" style="height:67px">
+    <header class="header fixed">
         <div class="container">
             <div class="header-wrapper clearfix">
 
@@ -57,7 +57,7 @@
             <div class="logo">
                 <a href="#home" class="scroll-to">
                     <span class="fa-stack">
-                        <img src="img/logo.png" style="height:100%;padding-bottom:10%;min-height:50px;"/>
+                        <img src="img/logo.png" style="height:100%;padding-bottom:10%;"/>
                     </span>
                     <span style="color:white;font-family:'als';font-size:1.12em;">Purple Feathers</span>
                 </a>
@@ -71,9 +71,12 @@
                 <ul class="sf-menu nav">
                     <li><a href="index.php#home">Home</a></li>
                     <li><a href="index.php#about">About</a></li>
-                    <li class="active"><a href="#events">Events</a></li>
+                    <li class="active"><a href="#">Events</a></li>
                     <li><a href="index.php#clients">Clients</a></li>
                     <li><a href="index.php#team">Team</a></li>
+                    <li><a href="#subscribe">Subscribe</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <!--li><a href="#price">Price</a></li-->
                     <li><a href="contact.php#location">Location</a></li>
                     <li><a href="contact.php#contact">Contact us</a></li>
                 </ul>
@@ -1946,7 +1949,7 @@
                         <li data-animation="flipInY" data-animation-delay="700"><a href="#" class="skype"><i class="fa fa-skype"></i></a></li>
                     </ul>
                 </div>
-                <span class="copyright" data-animation="fadeInUp" data-animation-delay="100"></span>
+                <span class="copyright" data-animation="fadeInUp" data-animation-delay="100">&copy; 2015 GeekHaven</span>
             </div>
         </div>
     </footer>
