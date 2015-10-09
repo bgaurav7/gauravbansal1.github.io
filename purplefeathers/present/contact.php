@@ -81,8 +81,8 @@
                     <li><a href="events.php">Events</a></li>
                     <li><a href="index.php#clients">Clients</a></li>
                     <li><a href="index.php#team">Team</a></li>
-                    <li><a href="#subscribe">Subscribe</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="index.php#subscribe">Subscribe</a></li>
+                    <li><a href="index.php#services">Services</a></li>
                     <!--li><a href="#price">Price</a></li-->
                     <li class="active"><a href="#location">Location</a></li>
                     <li><a href="#contact">Contact us</a></li>
