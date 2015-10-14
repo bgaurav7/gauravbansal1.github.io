@@ -4,7 +4,6 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
 
-<!-- Mirrored from eazzy.me/html/imevent/index-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Aug 2015 12:18:55 GMT -->
 <head>
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
@@ -1179,5 +1178,4 @@ $(window).load(function() {
 </script>
 </body>
 
-<!-- Mirrored from eazzy.me/html/imevent/index-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Aug 2015 12:20:06 GMT -->
 </html>
