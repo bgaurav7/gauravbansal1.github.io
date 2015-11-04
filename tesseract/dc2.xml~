@@ -1,0 +1,482 @@
+<krpano onstart="startup();">
+
+	<!-- include a animation file -->
+	<include url="progress_loadinganimation.xml" />
+
+	<!-- include buttons template (based on the buttons.png image)-->
+	<include url="buttonsbar-include.xml" />
+
+
+	<!-- load the first scene on startup -->
+	<action name="startup">
+		loadscene(image1, null, MERGE);
+	</action>
+
+	<!-- autorotate on idle state -->
+	<autorotate enabled="true"
+            waittime="1.0"
+            accel="5.0"
+            speed="20.0"
+            horizon="0.0"
+            tofov="off"
+            />
+
+
+    	<!-- hotspot styles (black and white hotspots) -->
+	<style name="hotspot_ani_white" editorplugin_ishotspotstyle="true"
+	       url="hotspots/a.png"
+	       crop="0|0|125|125"
+	       frames="49" framewidth="125" frameheight="125" frame="0"
+	       onloaded="if(device.mobile, set(scale,1)); hotspot_animate();"
+	       />
+
+	<!-- hotspot animation code -->
+	<action name="hotspot_animate">
+		if(loaded,
+			inc(frame,1,get(frames),0);
+			mul(ypos,frame,frameheight);
+			txtadd(crop,'0|',get(ypos),'|',get(framewidth),'|',get(frameheight));
+			delayedcall(0.03, hotspot_animate() );
+		  );
+	</action>
+
+
+
+
+	<!-- the map spot images -->
+	<style name="mapspot" keep="true" url="map/camicon.png" parent="map" align="lefttop" edge="center" scale.mobile="2" />
+
+	<!-- map opening - scale the map up to 100% (or smaller if the screen is too small) -->
+	<action name="openmap">
+		set(layer[map].onclick, closemap(); );
+		layer[map].changeorigin(center,center);
+
+		set(bigscale,0.5);
+
+		tween(layer[map].x, 0);
+		tween(layer[map].y, 0);
+		tween(layer[map].scale, get(bigscale));
+	</action>
+
+	<!-- map closing - scale the map back to 25% -->
+	<action name="closemap">
+		set(layer[map].onclick, openmap(); );
+		layer[map].changeorigin(leftbottom,leftbottom);
+
+		tween(layer[map].x, 0);
+		tween(layer[map].y, 0);
+		tween(layer[map].scale, 0.25);
+	</action>
+
+	<!-- action for loading the scene when clicking on the map spots -->
+	<action name="mapspot_loadscene">
+		if(layer[map].scale GT 0.25,
+			<!-- special mode for zoomed map: hide big map, loadscene, show small map -->
+			set(layer[map].enabled, false);
+			tween(layer[map].alpha, 0.0, 0.25, default,
+				loadscene(%1, null, MERGE, BLEND(1));
+
+				set(layer[map].onclick, openmap(); );
+				layer[map].changeorigin(leftbottom,leftbottom);
+
+				set(layer[map].x, 0);
+				set(layer[map].y, 0);
+				set(layer[map].scale, 0.25);
+
+				set(events[sceneload].onloadcomplete,
+					delayedcall(1,
+						tween(layer[map].alpha, 1.0, 0.5, default, set(layer[map].enabled, true); );
+					  );
+				  );
+			  );
+		  ,
+			<!-- small map: just load the scene -->
+			loadscene(%1, null, MERGE, BLEND(1));
+		  );
+	</action>
+
+	<!-- active spot image (overlays the normal spot) -->
+	<layer name="activespot" url="graphics/camicon_red.png" keep="true"
+	       align="lefttop" zorder="2" scale.mobile="1.5"
+	       />
+
+	<!-- radar layer (overlays the normal spot too, but is behind the activespot image) -->
+	<layer name="radar" keep="true"
+	       url.flash="radar.swf"
+	       url.html5="radar.js"
+	       align="center" zorder="1"
+	       scale.mobile="1.5"
+	       fillalpha="0.5" fillcolor="0x7F5F3F"
+	       linewidth="1.0" linecolor="0xE0E0A0" linealpha="0.5"
+	       />
+
+
+	<!-- the map image -->
+	<layer name="map" url="graphics/dc1.png" keep="true" handcursor="false" capture="false"
+	       align="leftbottom"
+	       scale="0.25" scalechildren="true"
+	       onclick="openmap();"
+	       />
+
+		<layer name="spot1" style="mapspot" x="610" y="530" zorder="1" onclick="mapspot_loadscene(image1);" />
+		<layer name="spot2" style="mapspot" x="770" y="290" zorder="1" onclick="mapspot_loadscene(image2);" />
+		<layer name="spot3" style="mapspot" x="450" y="770" zorder="1" onclick="mapspot_loadscene(image3);" />
+		<layer name="spot4" style="mapspot" x="850" y="530" zorder="1" onclick="mapspot_loadscene(image4);" />
+		<layer name="spot5" style="mapspot" x="850" y="730" zorder="1" onclick="mapspot_loadscene(image5);" />
+		<layer name="spot6" style="mapspot" x="1090" y="490" zorder="1" onclick="mapspot_loadscene(image6);" />
+		<layer name="spot7" style="mapspot" x="370" y="550" zorder="1" onclick="mapspot_loadscene(image7);" />
+		<layer name="spot8" style="mapspot" x="250" y="730" zorder="1" onclick="mapspot_loadscene(image8);" />
+		<layer name="spot9" style="mapspot" x="230" y="970" zorder="1" onclick="mapspot_loadscene(image9);" />
+		<layer name="spot10" style="mapspot" x="210" y="370" zorder="1" onclick="mapspot_loadscene(image10);" />
+		<layer name="spot11" style="mapspot" x="130" y="130" zorder="1" onclick="mapspot_loadscene(image11);" />
+
+
+		<scene name="image1" onstart="updateradar();" >
+
+			<action name="updateradar">
+				set(layer[activespot].parent, spot1);
+				set(layer[radar].parent, spot1);
+				set(layer[radar].heading, 146.309932474);
+			</action>
+
+			<view hlookat="-162.934570312" vlookat="0" fov="80" maxpixelzoom="2.0" fovmin="25" fovmax="140" />
+
+			<image>
+				<sphere url="walkthrough/dc1/WT14322755.jpg" />
+			</image>
+
+		
+			<hotspot name="spot2" style="hotspot_ani_white" ath="-162.934570312" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image2, view.hlookat=-265.894454956 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+			<hotspot name="spot3" style="hotspot_ani_white" ath="-15.0752344131" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image3, view.hlookat=-332.790100098 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+			<hotspot name="spot4" style="hotspot_ani_white" ath="-146.632949829" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image4, view.hlookat=-210.47595787 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+			<hotspot name="spot7" style="hotspot_ani_white" ath="15.1144361496" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image7, view.hlookat=-180.399785578 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+		</scene>
+			
+
+
+		<scene name="image2" onstart="updateradar();" >
+
+			<action name="updateradar">
+				set(layer[activespot].parent, spot2);
+				set(layer[radar].parent, spot2);
+				set(layer[radar].heading, -33.690067526);
+			</action>
+
+			<view hlookat="-85.8944549561" vlookat="0" fov="80" maxpixelzoom="2.0" fovmin="25" fovmax="140" />
+
+			<image>
+				<sphere url="walkthrough/dc1/WT14322760.jpg" />
+			</image>
+
+		
+			<hotspot name="spot1" style="hotspot_ani_white" ath="-85.8944549561" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image1, view.hlookat=-342.934570312 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+		</scene>
+			
+
+
+		<scene name="image3" onstart="updateradar();" >
+
+			<action name="updateradar">
+				set(layer[activespot].parent, spot3);
+				set(layer[radar].parent, spot3);
+				set(layer[radar].heading, 146.309932474);
+			</action>
+
+			<view hlookat="-152.790100098" vlookat="0" fov="80" maxpixelzoom="2.0" fovmin="25" fovmax="140" />
+
+			<image>
+				<sphere url="walkthrough/dc1/WT14322762.jpg" />
+			</image>
+
+		
+			<hotspot name="spot1" style="hotspot_ani_white" ath="-152.790100098" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image1, view.hlookat=-195.075234413 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+		</scene>
+			
+
+
+		<scene name="image4" onstart="updateradar();" >
+
+			<action name="updateradar">
+				set(layer[activespot].parent, spot4);
+				set(layer[radar].parent, spot4);
+				set(layer[radar].heading, 90.0);
+			</action>
+
+			<view hlookat="-30.4759578705" vlookat="0" fov="80" maxpixelzoom="2.0" fovmin="25" fovmax="140" />
+
+			<image>
+				<sphere url="walkthrough/dc1/WT14322769.jpg" />
+			</image>
+
+		
+			<hotspot name="spot1" style="hotspot_ani_white" ath="-30.4759578705" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image1, view.hlookat=-326.632949829 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+			<hotspot name="spot5" style="hotspot_ani_white" ath="-113.642753601" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image5, view.hlookat=-255.921577454 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+			<hotspot name="spot6" style="hotspot_ani_white" ath="77.4821014404" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image6, view.hlookat=-230.51625824 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+		</scene>
+			
+
+
+		<scene name="image5" onstart="updateradar();" >
+
+			<action name="updateradar">
+				set(layer[activespot].parent, spot5);
+				set(layer[radar].parent, spot5);
+				set(layer[radar].heading, 0);
+			</action>
+
+			<view hlookat="-75.9215774536" vlookat="0" fov="80" maxpixelzoom="2.0" fovmin="25" fovmax="140" />
+
+			<image>
+				<sphere url="walkthrough/dc1/WT14322770.jpg" />
+			</image>
+
+		
+			<hotspot name="spot4" style="hotspot_ani_white" ath="-75.9215774536" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image4, view.hlookat=-293.642753601 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+		</scene>
+			
+
+
+		<scene name="image6" onstart="updateradar();" >
+
+			<action name="updateradar">
+				set(layer[activespot].parent, spot6);
+				set(layer[radar].parent, spot6);
+				set(layer[radar].heading, -80.537677792);
+			</action>
+
+			<view hlookat="-50.5162582397" vlookat="0" fov="80" maxpixelzoom="2.0" fovmin="25" fovmax="140" />
+
+			<image>
+				<sphere url="walkthrough/dc1/WT14322775.jpg" />
+			</image>
+
+		
+			<hotspot name="spot4" style="hotspot_ani_white" ath="-50.5162582397" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image4, view.hlookat=-102.51789856 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+		</scene>
+			
+
+
+		<scene name="image7" onstart="updateradar();" >
+
+			<action name="updateradar">
+				set(layer[activespot].parent, spot7);
+				set(layer[radar].parent, spot7);
+				set(layer[radar].heading, 94.7636416907);
+			</action>
+
+			<view hlookat="-0.399785578251" vlookat="0" fov="80" maxpixelzoom="2.0" fovmin="25" fovmax="140" />
+
+			<image>
+				<sphere url="walkthrough/dc1/WT14322777.jpg" />
+			</image>
+
+		
+			<hotspot name="spot1" style="hotspot_ani_white" ath="-0.399785578251" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image1, view.hlookat=-164.88556385 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+			<hotspot name="spot8" style="hotspot_ani_white" ath="105.458343506" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image8, view.hlookat=-223.563373566 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+			<hotspot name="spot10" style="hotspot_ani_white" ath="-91.9377441406" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image10, view.hlookat=-88.7299118042 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+		</scene>
+			
+
+
+		<scene name="image8" onstart="updateradar();" >
+
+			<action name="updateradar">
+				set(layer[activespot].parent, spot8);
+				set(layer[radar].parent, spot8);
+				set(layer[radar].heading, 146.309932474);
+			</action>
+
+			<view hlookat="-43.5633735657" vlookat="0" fov="80" maxpixelzoom="2.0" fovmin="25" fovmax="140" />
+
+			<image>
+				<sphere url="walkthrough/dc1/WT14322781.jpg" />
+			</image>
+
+		
+			<hotspot name="spot7" style="hotspot_ani_white" ath="-43.5633735657" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image7, view.hlookat=-74.5416564941 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+			<hotspot name="spot9" style="hotspot_ani_white" ath="-149.741394043" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image9, view.hlookat=-66.2805709839 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+		</scene>
+			
+
+
+		<scene name="image9" onstart="updateradar();" >
+
+			<action name="updateradar">
+				set(layer[activespot].parent, spot9);
+				set(layer[radar].parent, spot9);
+				set(layer[radar].heading, 175.236358309);
+			</action>
+
+			<view hlookat="113.719429016" vlookat="0" fov="80" maxpixelzoom="2.0" fovmin="25" fovmax="140" />
+
+			<image>
+				<sphere url="walkthrough/dc1/WT14322789.jpg" />
+			</image>
+
+		
+			<hotspot name="spot8" style="hotspot_ani_white" ath="113.719429016" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image8, view.hlookat=-329.741394043 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+		</scene>
+			
+
+
+		<scene name="image10" onstart="updateradar();" >
+
+			<action name="updateradar">
+				set(layer[activespot].parent, spot10);
+				set(layer[radar].parent, spot10);
+				set(layer[radar].heading, 41.6335393366);
+			</action>
+
+			<view hlookat="91.2700881958" vlookat="0" fov="80" maxpixelzoom="2.0" fovmin="25" fovmax="140" />
+
+			<image>
+				<sphere url="walkthrough/dc1/WT14322790.jpg" />
+			</image>
+
+		
+			<hotspot name="spot7" style="hotspot_ani_white" ath="91.2700881958" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image7, view.hlookat=-271.937744141 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+			<hotspot name="spot11" style="hotspot_ani_white" ath="146.095443726" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image11, view.hlookat=-135.406406403 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+		</scene>
+			
+
+
+		<scene name="image11" onstart="updateradar();" >
+
+			<action name="updateradar">
+				set(layer[activespot].parent, spot11);
+				set(layer[radar].parent, spot11);
+				set(layer[radar].heading, 18.4349488229);
+			</action>
+
+			<view hlookat="44.5935935974" vlookat="0" fov="80" maxpixelzoom="2.0" fovmin="25" fovmax="140" />
+
+			<image>
+				<sphere url="walkthrough/dc1/WT14322792.jpg" />
+			</image>
+
+		
+			<hotspot name="spot10" style="hotspot_ani_white" ath="44.5935935974" atv="0"
+			    	onclick="looktohotspot(get(name), 30, linear(60));
+				 		loadscene(image10, view.hlookat=-33.9045562744 , MERGE , BLEND(1));
+				 		wait(BLEND);"
+				 />
+
+				
+		</scene>
+			
+</krpano>
+	
